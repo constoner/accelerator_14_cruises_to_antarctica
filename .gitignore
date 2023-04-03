@@ -1,7 +1,7 @@
 .DS_Store
 .idea
 .vscode
-package.json
+# package.json
 # package-lock.json для автодеплоя на gh-pages
 *.ai
 *.log
