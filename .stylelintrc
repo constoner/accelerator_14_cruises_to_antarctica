@@ -1,0 +1,6 @@
+{
+  "extends": "./stylelintconfig.cjs",
+  "rules" : {
+    "at-rule-no-unknown": null
+  }
+}
