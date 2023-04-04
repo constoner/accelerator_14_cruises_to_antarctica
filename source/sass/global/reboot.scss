@@ -17,7 +17,7 @@ html {
   font-size: $fz-default;
   line-height: 24px;
   font-family: $ff-placeholder;
-  color: $color-default-black;
+  color: $color-tangaroa-dark;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -31,11 +31,21 @@ body {
   width: 100%;
   height: 100%;
 
-  background-color: $color-default-white;
+  background-color: $color-alice-blue-lite;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $ff-placeholder;
+  color: $color-tangaroa-dark;
 }
 
 a {
-  color: $color-default-black;
+  color: $color-tangaroa-dark;
   text-decoration: none;
 }
 
@@ -44,6 +54,7 @@ video {
   display: block;
   max-width: 100%;
   height: auto;
+  object-fit: contain;
 }
 
 textarea {
@@ -57,9 +68,9 @@ textarea {
 // если в стилях уже используется box-shadow есть другое решение -
 // задать к списку транзишенов `background-color 10000000s ease-out`
 input:-webkit-autofill {
-  box-shadow: inset 0 0 0 1000px $color-default-white;
+  box-shadow: inset 0 0 0 1000px $color-alice-blue-lite;
 
-  -webkit-text-fill-color: $color-default-black;
+  -webkit-text-fill-color: $color-tangaroa-dark;
 }
 
 // firefox placeholder \ invalid fix + ios bdrs
@@ -111,13 +122,14 @@ input[type="number"] {
 // ios button \ inputs reset
 select,
 textarea,
-input:matches([type="email"],
-  [type="number"],
-  [type="password"],
-  [type="search"],
-  [type="tel"],
-  [type="text"],
-  [type="url"]) {
+input:matches(
+    [type="email"],
+    [type="number"],
+    [type="password"],
+    [type="search"],
+    [type="tel"],
+    [type="text"],
+    [type="url"]) {
   appearance: none;
 }
 
