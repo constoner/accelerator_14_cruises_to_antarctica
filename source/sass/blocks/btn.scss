@@ -26,7 +26,7 @@
   }
 
   @include focus {
-    outline: 3px solid #ffb451;
+    outline: 2px solid $color-koromiko-accent;
   }
 
   @include active {

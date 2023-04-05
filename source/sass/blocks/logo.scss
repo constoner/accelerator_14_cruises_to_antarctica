@@ -1,0 +1,31 @@
+.logo {
+  display: block;
+  width: 70px;
+  height: 38;
+  color: inherit;
+  transition: opacity $trans-default;
+
+  @include vp-1023 {
+    width: 38px;
+    height: 20px;
+  }
+
+  @include hover {
+    opacity: 0.6;
+  }
+
+  @include focus {
+    outline: 2px solid $color-koromiko-accent;
+  }
+
+  @include active {
+    opacity: 0.2;
+  }
+}
+
+.logo__image {
+  display: block;
+  max-width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
