@@ -38,13 +38,56 @@
   <div class="wrapper">
 
     <!-- header -->
-    <header>
+    <header class="header" data-header>
       <div class="container">
+        <div class="header__container">
+          <a class="header__logo logo" href="./index.html" aria-label="Переход на главную страницу.">
+            <svg class="logo__image" width="70" height="38">
+              <use href="./img/svg/logo.svg#logo-icon"></use>
+            </svg>
+          </a>
+
+          <button class="header__burger-btn menu-btn" type="button" aria-label="Кнопка меню." data-burger>
+            <span class="menu-btn__E"></span>
+            <span class="menu-btn__X"></span>
+          </button>
+
+          <nav class="header__nav">
+            <div class="header__menu-underlay" data-close-menu></div>
+            <div class="header__menu-wrapper">
+              <a class="header__menu-icon logo" href="./index.html" aria-label="Переход на главную страницу.">
+                <svg class="logo__image" width="70" height="38">
+                  <use href="./img/svg/logo.svg#logo-icon"></use>
+                </svg>
+              </a>
+              <ul class="header__menu menu">
+                <li class="menu__item">
+                  <a class="menu__link" href="#!">Преимущества</a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="#!">Направления</a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="#!">Ближайшие круизы</a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="#!">Контакты</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
       </div>
     </header>
 
     <!-- main -->
     <main>
+      <section class="main__hero"
+        style="background-color: steelblue; position: relative; z-index: 2; width: 100%; height: 300px; padding-top: 150px;">
+        <div class="container">
+          <p>Test paragrah</p>
+        </div>
+      </section>
     </main>
 
     <!-- footer -->
@@ -52,25 +95,25 @@
       <div class="container">
         <div class="footer__container">
 
-          <a class="footer__logo logo" href="./index.html">
-            <svg class="logo__image" width="70" height="38" alt="Логотип Круизы в Антарктику.">
+          <a class="footer__logo logo" href="./index.html" aria-label="Переход на главную страницу.">
+            <svg class="logo__image" width="70" height="38">
               <use href="./img/svg/logo.svg#logo-icon"></use>
             </svg>
           </a>
 
           <nav class="footer__nav">
-            <ul class="footer__menu menu">
-              <li class="menu__item">
-                <a class="menu__link" href="#!">Преимущества</a>
+            <ul class="footer__menu footer-menu">
+              <li class="footer-menu__item">
+                <a class="footer-menu__link" href="#!">Преимущества</a>
               </li>
-              <li class="menu__item">
-                <a class="menu__link" href="#!">Направления</a>
+              <li class="footer-menu__item">
+                <a class="footer-menu__link" href="#!">Направления</a>
               </li>
-              <li class="menu__item">
-                <a class="menu__link" href="#!">Ближайшие круизы</a>
+              <li class="footer-menu__item">
+                <a class="footer-menu__link" href="#!">Ближайшие круизы</a>
               </li>
-              <li class="menu__item">
-                <a class="menu__link" href="#!">Контакты</a>
+              <li class="footer-menu__item">
+                <a class="footer-menu__link" href="#!">Контакты</a>
               </li>
             </ul>
           </nav>
