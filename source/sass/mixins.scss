@@ -1,9 +1,3 @@
-@mixin retina {
-  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    @content;
-  }
-}
-
 @mixin hover {
   @media (hover: hover) {
     &:hover:not(.focus-visible) {

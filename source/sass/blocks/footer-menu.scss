@@ -1,19 +1,16 @@
-.menu {
+.footer-menu {
   display: flex;
   flex-wrap: wrap;
   list-style-type: none;
+  margin: 0;
   padding: 0;
 
   @include vp-767 {
     flex-direction: column;
-    flex-wrap: nowrap;
-    padding-left: 15px;
-    padding-right: 30px;
-    background-color: $color-alice-blue-lite;
   }
 }
 
-.menu__item {
+.footer-menu__item {
   margin: 7px 0;
 
   &:not(:last-child) {
@@ -30,12 +27,12 @@
   @include vp-767 {
     &:not(:last-child) {
       margin: 0;
-      margin-bottom: 10px;
+      margin-bottom: 13px;
     }
   }
 }
 
-.menu__link {
+.footer-menu__link {
   $link-color: $color-alice-blue-lite;
   position: relative;
   display: block;
@@ -65,14 +62,6 @@
     line-height: 15px;
   }
 
-  @include vp-767 {
-    padding: 10px;
-    font-size: 18px;
-    line-height: 22px;
-    $link-color: $color-tangaroa-dark;
-    color: $link-color;
-  }
-
   @include hover {
     &::after {
       opacity: 1;
@@ -86,6 +75,6 @@
   &:active {
     // использую !important чтобы перебить миксины для состояний
     /* stylelint-disable-next-line declaration-no-important */
-    opacity: 0.2;
+    opacity: 0.2 !important;
   }
 }

@@ -41,8 +41,10 @@
     outline: 2px solid $color-koromiko-accent;
   }
 
-  @include active {
-    opacity: 0.2;
+  &:active {
+    // использую !important чтобы перебить миксины для состояний
+    /* stylelint-disable-next-line declaration-no-important */
+    opacity: 0.2 !important;
   }
 
   &:disabled,

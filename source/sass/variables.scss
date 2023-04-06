@@ -35,7 +35,9 @@ $ff-placeholder:                    "Montserrat", "Trebuchet MS", sans-serif;
 // ---------------------------------
 
 $tf-default:                        ease-out;
+$tf-reverse:                        ease-in;
 $trans-default:                     0.2s $tf-default;
+$trans-reverse:                     0.2s $tf-reverse;
 
 // если требуется изинг отличный от $tf-default, то переменную называем не цифрой
 $trans-modal:                       0.6s cubic-bezier(0.55, 0, 0.1, 1);

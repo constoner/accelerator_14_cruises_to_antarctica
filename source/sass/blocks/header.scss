@@ -1,0 +1,128 @@
+.header {
+  position: absolute;
+  width: 100%;
+  padding: 35px 0;
+  color: $color-alice-blue-lite;
+  background-color: $color-prussian-blue-dark;
+
+  @include vp-1023 {
+    padding: 30px 0;
+  }
+
+  @include vp-767 {
+    padding: 20px 0;
+  }
+}
+
+.header__container {
+  position: relative;
+  z-index: 3;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 20px;
+  justify-items: end;
+  align-items: center;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+  @include vp-1023 {
+    filter: unset;
+  }
+
+  @include vp-767 {
+    gap: 0;
+  }
+}
+
+.is-open .header__logo {
+  opacity: 0;
+  transition: opacity $trans-reverse;
+}
+
+.header__burger-btn {
+  position: relative;
+  z-index: 20;
+  display: none;
+
+  @include vp-767 {
+    display: block;
+  }
+}
+
+.header__nav {
+  @include vp-767 {
+    position: absolute;
+    z-index: 10;
+    top: -20px;
+    left: -15px;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    pointer-events: none;
+  }
+}
+
+.is-open .header__nav {
+  pointer-events: all;
+}
+
+.header__menu-underlay {
+  display: none;
+
+  @include vp-767 {
+    position: absolute;
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 43, 102, 0.5);
+    opacity: 0;
+    transition: opacity $trans-default;
+  }
+}
+
+.is-open .header__menu-underlay {
+  opacity: 1;
+  transition: opacity $trans-default;
+}
+
+.header__menu-wrapper {
+  @include vp-767 {
+    position: absolute;
+    z-index: 15;
+    right: 0;
+    width: 285px;
+    height: 100vh;
+    margin: 0;
+    margin-left: auto;
+    background-color: $color-alice-blue-lite;
+    transform: translateX(100%);
+    transition: transform $trans-default;
+  }
+}
+
+.is-open .header__menu-wrapper {
+  transform: translateX(0%);
+  transition: transform $trans-reverse;
+}
+
+.header .header__menu-icon {
+  display: none;
+
+  @include vp-767 {
+    position: absolute;
+    z-index: 20;
+    top: 20px;
+    left: 15px;
+    display: block;
+    color: $color-tangaroa-dark;
+  }
+}
+
+.header__menu {
+  margin: 0;
+
+  @include vp-767 {
+    height: 100vh;
+    margin-top: 50px;
+    overflow: scroll;
+  }
+}
