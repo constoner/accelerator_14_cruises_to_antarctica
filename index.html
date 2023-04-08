@@ -82,10 +82,106 @@
 
     <!-- main -->
     <main>
-      <section class="main__hero"
-        style="background-color: steelblue; position: relative; z-index: 2; width: 100%; height: 300px; padding-top: 150px;">
+
+      <!-- hero -->
+      <section class="hero">
+        <div class="hero__background">
+          <picture>
+            <source media="(max-width: 767px)" srcset="./img/hero-small.jpg, ./img/hero-small@2x.jpg 2x">
+            <source media="(max-width: 767px)" type="image/webp" srcset="./img/hero-small.webp, ./img/hero-small@2x.webp 2x">
+            <source media="(max-width: 1023px)" srcset="./img/hero-medium.jpg, ./img/hero-medium@2x.jpg 2x">
+            <source media="(max-width: 1023px)" type="image/webp" srcset="./img/hero-medium.webp, ./img/hero-medium@2x.webp 2x">
+            <source type="image/webp" srcset="./img/hero-large.webp, ./img/hero-large@2x.webp 2x">
+            <img src="./img/hero-large.jpg" srcset="./img/hero-large@2x.jpg 2x" width="1366" height="650"
+              alt="Вид на антарктическую бухту и заснеженные скалы.">
+          </picture>
+        </div>
         <div class="container">
-          <p>Test paragrah</p>
+          <div class="hero__container">
+            <h1>Круизы в&nbsp;Антарктику</h1>
+            <p>Волшебный мир айсбергов и&nbsp;пингвинов</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- promo -->
+      <section class="promo">
+        <div class="container">
+          <div class="promo__container">
+            <div class="promo__content">
+              <h2>Путешествие на&nbsp;край Земли</h2>
+              <p>Это волшебное путешествие поможет вам познакомиться поближе с&nbsp;удивительным миром Антарктики. Наш круизный лайнер отвезет вас на&nbsp;край Земли, где вы&nbsp;сможете увидеть: ледяные айсберги, несколько видов пингвинов, китов, морских котиков и&nbsp;многое другое.</p>
+            </div>
+            <div class="promo__image">
+              <picture>
+                <source media="(max-width: 767px)" srcset="./img/promo-small.jpg, ./img/promo-small@2x.jpg 2x">
+                <source media="(max-width: 767px)" type="image/webp" srcset="./img/promo-small.webp, ./img/promo-small@2x.webp 2x">
+                <source media="(max-width: 1023px)" srcset="./img/promo-medium.jpg, ./img/promo-medium@2x.jpg 2x">
+                <source media="(max-width: 1023px)" type="image/webp" srcset="./img/promo-medium.webp, ./img/promo-medium@2x.webp 2x">
+                <source type="image/webp" srcset="./img/promo-large.webp, ./img/promo-large@2x.webp 2x">
+                <img src="./img/promo-large.jpg" srcset="./img/promo-large@2x.jpg 2x" width="560" height="301"
+                  alt="Три пингвина на снежном склоне. Один из пинвинов растопырил крылья и смотрит прямо в камеру.">
+              </picture>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- features -->
+      <section class="features">
+        <div class="features__background">
+          <picture>
+            <source media="(max-width: 767px)" srcset="./img/features-bg-small.jpg, ./img/features-bg-small@2x.jpg 2x">
+            <source media="(max-width: 767px)" type="image/webp" srcset="./img/features-bg-small.webp, ./img/features-bg-small@2x.webp 2x">
+            <source media="(max-width: 1023px)" srcset="./img/features-bg-medium.jpg, ./img/features-bg-medium@2x.jpg 2x">
+            <source media="(max-width: 1023px)" type="image/webp" srcset="./img/features-bg-medium.webp, ./img/features-bg-medium@2x.webp 2x">
+            <source type="image/webp" srcset="./img/features-bg-large.webp, ./img/features-bg-large@2x.webp 2x">
+            <img src="./img/features-bg-large.jpg" srcset="./img/features-bg-large@2x.jpg 2x" width="1366" height="562"
+              alt="">
+          </picture>
+        </div>
+        <div class="container">
+          <div class="features__container">
+            <h2>Преимущества</h2>
+            <ul class="features__list">
+              <li class="features__item">
+                <div class="features__icon">
+                  <svg
+                  width="27"
+                  height="32"
+                  aria-hidden="true">
+                    <use href="./img/sprite.svg#features-ship"></use>
+                  </svg>
+                </div>
+                <h3>Небольшой круизный лайнер</h3>
+                <p>Круизный лайнер, рассчитанный всего лишь на&nbsp;300&nbsp;гостей, поможет избежать шума и&nbsp;очередей и&nbsp;даст возможность насладиться видами и&nbsp;природой.</p>
+              </li>
+              <li class="features__item">
+                <div class="features__icon">
+                  <svg
+                  width="38"
+                  height="32"
+                  aria-hidden="true">
+                    <use href="./img/sprite.svg#features-all-inclusive"></use>
+                  </svg>
+                </div>
+                <h3>Система все включено</h3>
+                <p>Все наши круизы работают по&nbsp;системе &laquo;Все Включено&raquo;. Великолепные блюда и&nbsp;безлимитный бар доступны для вас 24&nbsp;часа.</p>
+              </li>
+              <li class="features__item">
+                <div class="features__icon">
+                  <svg
+                  width="44"
+                  height="32"
+                  aria-hidden="true">
+                    <use href="./img/sprite.svg#features-boat"></use>
+                  </svg>
+                </div>
+                <h3>Экскурсионные туры на&nbsp;Zodiac</h3>
+                <p>Экскурсионные туры к&nbsp;берегам Антарктиды совершаются на&nbsp;оборудованных лодках типа Zodiac c&nbsp;опытными экскурсоводами.</p>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
     </main>
