@@ -733,9 +733,8 @@ button,
   outline: 2px solid #ffb451;
 }
 
-.logo:active {
-  /* stylelint-disable-next-line declaration-no-important */
-  opacity: 0.2 !important;
+.logo:not(.bicycle:hover):active {
+  opacity: 0.2;
 }
 
 .logo__image {
@@ -797,8 +796,7 @@ button,
   outline: 2px solid #ffb451;
 }
 
-.menu__link:active {
-  /* stylelint-disable-next-line declaration-no-important */
+.menu__link:not(.bicycle:hover):active {
   opacity: 0.2;
 }
 
@@ -1043,9 +1041,8 @@ button,
   outline: 2px solid #ffb451;
 }
 
-.footer-menu__link:active {
-  /* stylelint-disable-next-line declaration-no-important */
-  opacity: 0.2 !important;
+.footer-menu__link:not(.bicycle):active {
+  opacity: 0.2;
 }
 
 .social-list {
@@ -1085,9 +1082,8 @@ button,
   outline: 2px solid #ffb451;
 }
 
-.social-list__link:active {
-  /* stylelint-disable-next-line declaration-no-important */
-  opacity: 0.2 !important;
+.social-list__link:not(.bicycle:hover):active {
+  opacity: 0.2;
 }
 
 .social-list__link:disabled,

@@ -41,10 +41,8 @@
     outline: 2px solid $color-koromiko-accent;
   }
 
-  &:active {
-    // использую !important чтобы перебить миксины для состояний
-    /* stylelint-disable-next-line declaration-no-important */
-    opacity: 0.2 !important;
+  &:not(.bicycle:hover):active {
+    opacity: 0.2;
   }
 
   &:disabled,
