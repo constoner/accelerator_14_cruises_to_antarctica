@@ -11,7 +11,6 @@
 .footer__container {
   display: grid;
   grid-template-columns: auto 1fr 0.25fr;
-  align-items: center;
 
   @include vp-767 {
     grid-template-columns: 1fr;
@@ -44,4 +43,8 @@
     margin-right: 0;
     margin-left: -11px;
   }
+}
+
+.footer__menu {
+  height: 100%;
 }
