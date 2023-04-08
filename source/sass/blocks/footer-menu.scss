@@ -19,6 +19,7 @@
 
   @include vp-1023 {
     margin: 2px 0;
+
     &:not(:last-child) {
       margin-right: 23px;
     }
@@ -37,7 +38,7 @@
   position: relative;
   display: block;
   width: fit-content;
-  font-family: "Montserrat";
+  font-family: $ff-placeholder;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
