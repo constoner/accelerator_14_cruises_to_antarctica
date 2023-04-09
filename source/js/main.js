@@ -23,7 +23,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const form = new Form();
     window.form = form;
     form.init();
-    setTimeout(initMap(), 2000);
+    setTimeout(initMap(), 3000);
   });
 });
 

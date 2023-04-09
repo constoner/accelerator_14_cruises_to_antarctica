@@ -30,7 +30,7 @@ function init(ymaps) {
   let marker = new ymaps.Placemark(
       [59.93750345190682, 30.322547392311055], {}, {
         iconLayout: 'default#image',
-        iconImageHref: './../img/svg/map-pin.svg',
+        iconImageHref: './img/svg/map-pin.svg',
         iconImageSize: [18, 22],
         iconImageOffset: [-9, -22],
       }
@@ -45,6 +45,7 @@ function init(ymaps) {
 
 const elem = document.createElement('script');
 elem.type = 'text/javascript';
+elem.async = true;
 elem.src = 'https://api-maps.yandex.ru/2.1?apikey=980ff082-308c-4468-804a-142a99788d78&lang=ru_RU';
 document.getElementsByTagName('body')[0].appendChild(elem);
 
