@@ -1228,6 +1228,15 @@ button,
   right: 0;
 }
 
+.map__interactive [class*=ground-pane] {
+  -webkit-filter: grayscale(0.5);
+  filter: grayscale(0.5);
+}
+
+.map__interactive [class*=copyrights-pane] {
+  display: none;
+}
+
 .footer {
   padding: 50px 0;
   color: #f9fbfd;

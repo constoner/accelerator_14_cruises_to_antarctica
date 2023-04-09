@@ -32,6 +32,8 @@
   <link rel="preload" href="./fonts/montserrat-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="./fonts/montserrat-semibold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="./fonts/montserrat-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preconnect" href="//api-maps.yandex.ru">
+  <link rel="dns-prefetch" href="//api-maps.yandex.ru">
 </head>
 
 <body>
@@ -68,8 +70,8 @@
                 <li class="menu__item">
                   <a class="menu__link" href="./departures.html"">Направления</a>
                 </li>
-                <li class="menu__item">
-                  <a class="menu__link" href="#next-cruises">Ближайшие круизы</a>
+                <li class=" menu__item">
+                    <a class="menu__link" href="#next-cruises">Ближайшие круизы</a>
                 </li>
                 <li class="menu__item">
                   <a class="menu__link" href="#contacts">Контакты</a>
@@ -147,7 +149,7 @@
               srcset="./img/features-bg-medium.webp, ./img/features-bg-medium@2x.webp 2x">
             <source type="image/webp" srcset="./img/features-bg-large.webp, ./img/features-bg-large@2x.webp 2x">
             <img src="./img/features-bg-large.jpg" srcset="./img/features-bg-large@2x.jpg 2x" width="1366" height="562"
-              alt="">
+              alt="" loading="lazy">
           </picture>
         </div>
         <div class="container">

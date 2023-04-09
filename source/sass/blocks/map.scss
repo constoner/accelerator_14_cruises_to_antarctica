@@ -24,4 +24,12 @@
   bottom: 0;
   left: 0;
   right: 0;
+
+  & [class*="ground-pane"] {
+    filter: grayscale(0.5);
+  }
+
+  & [class*="copyrights-pane"] {
+    display: none;
+  }
 }
