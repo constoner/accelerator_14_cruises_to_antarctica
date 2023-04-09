@@ -1179,12 +1179,12 @@ button,
   line-height: 150%;
 }
 
-.contacts__txt-wrapper {
+.contacts__item {
   position: relative;
   margin-top: 33px;
 }
 
-.contacts__txt-wrapper img {
+.contacts__item img {
   position: absolute;
   top: 2px;
 }
