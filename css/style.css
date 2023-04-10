@@ -734,7 +734,7 @@ button,
 }
 
 .logo.focus-visible:focus {
-  outline: 2px solid #ffb451;
+  outline: 3px solid #ffb451;
 }
 
 .logo:not(.bicycle:hover):active {
@@ -789,15 +789,23 @@ button,
   width: 100%;
   height: 2px;
   background-color: rgba(249, 251, 253, 0.8);
+  -webkit-transform-origin: 50%;
+  -ms-transform-origin: 50%;
+  transform-origin: 50%;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
   opacity: 0;
-  -webkit-transition: opacity 0.2s ease-out;
-  -o-transition: opacity 0.2s ease-out;
-  transition: opacity 0.2s ease-out;
+  -webkit-transition: opacity 0.2s ease-out, -webkit-transform 0.2s ease-out;
+  transition: opacity 0.2s ease-out, -webkit-transform 0.2s ease-out;
+  -o-transition: transform 0.2s ease-out, opacity 0.2s ease-out;
+  transition: transform 0.2s ease-out, opacity 0.2s ease-out;
+  transition: transform 0.2s ease-out, opacity 0.2s ease-out, -webkit-transform 0.2s ease-out;
   content: "";
 }
 
 .menu__link.focus-visible:focus {
-  outline: 2px solid #ffb451;
+  outline: 3px solid #ffb451;
 }
 
 .menu__link:not(.bicycle:hover):active {
@@ -958,7 +966,7 @@ button,
 }
 
 .btn.focus-visible:focus {
-  outline: 2px solid #ffb451;
+  outline: 3px solid #ffb451;
 }
 
 .btn.focus-visible:active {
@@ -1146,6 +1154,252 @@ button,
   object-fit: contain;
 }
 
+.booking {
+  position: relative;
+  padding: 50px 0;
+  background-color: #e3ecf6;
+}
+
+.booking__background {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.booking__background img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.booking__container {
+  position: relative;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0 60px;
+}
+
+.booking__content-wrapper {
+  margin-right: 60px;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+}
+
+.booking__content-wrapper h2 {
+  margin: 0;
+  margin-bottom: 30px;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 150%;
+}
+
+.booking__content-wrapper p {
+  margin: 0;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+}
+
+.booking__form {
+  -webkit-box-flex: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: 403px;
+  -webkit-box-shadow: 0 4px 45px rgba(1, 28, 64, 0.15);
+  box-shadow: 0 4px 45px rgba(1, 28, 64, 0.15);
+}
+
+.form {
+  padding: 50px;
+  color: #f9fbfd;
+  background-color: #011c40;
+}
+
+.form br {
+  display: none;
+}
+
+.form h3 {
+  margin: 0;
+  margin-bottom: 35px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  color: #f9fbfd;
+}
+
+.form form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.form input {
+  width: 100%;
+  padding: 11px 16px;
+  font-family: "Montserrat", "Trebuchet MS", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: #011c40;
+  background-color: #f9fbfd;
+  border: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -webkit-transition: -webkit-box-shadow 0.2s ease-out;
+  transition: -webkit-box-shadow 0.2s ease-out;
+  -o-transition: box-shadow 0.2s ease-out;
+  transition: box-shadow 0.2s ease-out;
+  transition: box-shadow 0.2s ease-out, -webkit-box-shadow 0.2s ease-out;
+}
+
+.form input::-webkit-input-placeholder {
+  color: rgba(1, 28, 64, 0.7);
+}
+
+.form input::-moz-placeholder {
+  color: rgba(1, 28, 64, 0.7);
+}
+
+.form input:-ms-input-placeholder {
+  color: rgba(1, 28, 64, 0.7);
+}
+
+.form input::-ms-input-placeholder {
+  color: rgba(1, 28, 64, 0.7);
+}
+
+.form input::placeholder {
+  color: rgba(1, 28, 64, 0.7);
+}
+
+.form input.focus-visible:focus {
+  outline: 3px solid #ffb451;
+}
+
+.form input:disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.form div + label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: left;
+  cursor: pointer;
+  opacity: 1;
+  -webkit-transition: opacity 0.2s ease-out;
+  -o-transition: opacity 0.2s ease-out;
+  transition: opacity 0.2s ease-out;
+}
+
+.form input[type=checkbox] + span {
+  position: relative;
+  display: block;
+  width: 18px;
+  height: 18px;
+  margin-right: 5px;
+  background-color: #f9fbfd;
+}
+
+.form input[type=checkbox] + span::before {
+  position: absolute;
+  top: 5px;
+  left: 3px;
+  display: block;
+  width: 12px;
+  height: 8px;
+  color: #011c40;
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 2.5L5.28571 7L11 1' stroke='%23101A56'/%3E%3C/svg%3E%0A");
+  content: "";
+  opacity: 0;
+  -webkit-transition: opacity 0.2s ease-out;
+  -o-transition: opacity 0.2s ease-out;
+  transition: opacity 0.2s ease-out;
+}
+
+.form span + span {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 130%;
+}
+
+.form input[type=checkbox]:checked + span::before {
+  opacity: 1;
+}
+
+.form button {
+  margin: 0;
+  margin-top: 10px;
+  padding: 10px 10px 12px;
+  font-family: "Montserrat", "Trebuchet MS", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  color: #011c40;
+  background-color: #f9fbfd;
+  border: none;
+  cursor: pointer;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -webkit-transition: -webkit-box-shadow 0.2s ease-out;
+  transition: -webkit-box-shadow 0.2s ease-out;
+  -o-transition: box-shadow 0.2s ease-out;
+  transition: box-shadow 0.2s ease-out;
+  transition: box-shadow 0.2s ease-out, -webkit-box-shadow 0.2s ease-out;
+}
+
+.form button.focus-visible:focus {
+  outline: 3px solid #ffb451;
+}
+
+.form button:not(.bicycle:hover):active {
+  opacity: 0.2;
+}
+
+.form button:disabled,
+.form button.disabled {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.form button .is-invalid input {
+  -webkit-box-shadow: 0 0 0 2px #011c40, 0 0 0 4px #f27a5c;
+  box-shadow: 0 0 0 2px #011c40, 0 0 0 4px #f27a5c;
+}
+
+.form button .is-valid input {
+  -webkit-box-shadow: 0 0 0 2px #011c40, 0 0 0 4px #7cde8b;
+  box-shadow: 0 0 0 2px #011c40, 0 0 0 4px #7cde8b;
+}
+
+.form button .is-invalid input[type=checkbox] + span {
+  background-color: #f27a5c;
+}
+
 .contacts {
   padding: 120px 0;
 }
@@ -1197,6 +1451,11 @@ button,
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
+}
+
+.contacts__address a.focus-visible:focus,
+.contacts__address p.focus-visible:focus {
+  outline: 3px solid #ffb451;
 }
 
 .map {
@@ -1307,15 +1566,20 @@ button,
   width: 100%;
   height: 2px;
   background-color: rgba(249, 251, 253, 0.8);
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
   opacity: 0;
-  -webkit-transition: opacity 0.2s ease-out;
-  -o-transition: opacity 0.2s ease-out;
-  transition: opacity 0.2s ease-out;
+  -webkit-transition: opacity 0.2s ease-out, -webkit-transform 0.2s ease-out;
+  transition: opacity 0.2s ease-out, -webkit-transform 0.2s ease-out;
+  -o-transition: transform 0.2s ease-out, opacity 0.2s ease-out;
+  transition: transform 0.2s ease-out, opacity 0.2s ease-out;
+  transition: transform 0.2s ease-out, opacity 0.2s ease-out, -webkit-transform 0.2s ease-out;
   content: "";
 }
 
 .footer-menu__link.focus-visible:focus {
-  outline: 2px solid #ffb451;
+  outline: 3px solid #ffb451;
 }
 
 .footer-menu__link:not(.bicycle):active {
@@ -1356,7 +1620,7 @@ button,
 }
 
 .social-list__link.focus-visible:focus {
-  outline: 2px solid #ffb451;
+  outline: 3px solid #ffb451;
 }
 
 .social-list__link:not(.bicycle:hover):active {
@@ -1516,6 +1780,29 @@ button,
   .features__icon {
     height: 26px;
     margin-bottom: 24px;
+  }
+
+  .booking {
+    padding: 100px 0;
+  }
+
+  .booking__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .booking__content-wrapper {
+    margin-right: 0;
+    margin-bottom: 60px;
+    text-align: center;
+  }
+
+  .booking__content-wrapper h2 {
+    margin-bottom: 25px;
+    font-size: 34px;
   }
 
   .contacts {
@@ -1711,6 +1998,43 @@ button,
     padding: 25px 15px 25px 20px;
   }
 
+  .booking {
+    padding: 65px 0;
+  }
+
+  .booking__content-wrapper {
+    margin-bottom: 40px;
+    padding: 0 10px;
+  }
+
+  .booking__content-wrapper h2 {
+    margin-bottom: 25px;
+    font-size: 24px;
+    line-height: 31px;
+  }
+
+  .booking__content-wrapper p {
+    font-size: 16px;
+    line-height: 140%;
+  }
+
+  .booking__content-wrapper p br {
+    display: none;
+  }
+
+  .booking__form {
+    width: 100%;
+  }
+
+  .form {
+    padding: 40px 30px;
+    text-align: center;
+  }
+
+  .form br {
+    display: inline;
+  }
+
   .contacts {
     padding: 65px 0;
   }
@@ -1783,6 +2107,9 @@ button,
   }
 
   .menu__link:hover:not(.focus-visible)::after {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
     opacity: 1;
   }
 
@@ -1790,7 +2117,24 @@ button,
     opacity: 0.6;
   }
 
+  .form input:hover:not(.focus-visible) {
+    -webkit-box-shadow: 0 0 0 2px #011c40, 0 0 0 4px #f9fbfd;
+    box-shadow: 0 0 0 2px #011c40, 0 0 0 4px #f9fbfd;
+  }
+
+  .form div + label:hover:not(.focus-visible) {
+    opacity: 0.6;
+  }
+
+  .form button:hover:not(.focus-visible) {
+    -webkit-box-shadow: 0 0 0 2px #011c40, 0 0 0 4px #f9fbfd;
+    box-shadow: 0 0 0 2px #011c40, 0 0 0 4px #f9fbfd;
+  }
+
   .footer-menu__link:hover:not(.focus-visible)::after {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
     opacity: 1;
   }
 

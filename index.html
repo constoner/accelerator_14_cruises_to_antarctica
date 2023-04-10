@@ -32,8 +32,8 @@
   <link rel="preload" href="./fonts/montserrat-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="./fonts/montserrat-semibold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="./fonts/montserrat-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-  <link rel="preconnect" href="//api-maps.yandex.ru">
-  <link rel="dns-prefetch" href="//api-maps.yandex.ru">
+  <link rel="preconnect" href="https://api-maps.yandex.ru">
+  <link rel="dns-prefetch" href="https://api-maps.yandex.ru">
 </head>
 
 <body>
@@ -90,12 +90,12 @@
       <section class="hero">
         <div class="hero__background">
           <picture>
-            <source media="(max-width: 767px)" srcset="./img/hero-small.jpg, ./img/hero-small@2x.jpg 2x">
             <source media="(max-width: 767px)" type="image/webp"
               srcset="./img/hero-small.webp, ./img/hero-small@2x.webp 2x">
-            <source media="(max-width: 1023px)" srcset="./img/hero-medium.jpg, ./img/hero-medium@2x.jpg 2x">
+            <source media="(max-width: 767px)" srcset="./img/hero-small.jpg, ./img/hero-small@2x.jpg 2x">
             <source media="(max-width: 1023px)" type="image/webp"
               srcset="./img/hero-medium.webp, ./img/hero-medium@2x.webp 2x">
+            <source media="(max-width: 1023px)" srcset="./img/hero-medium.jpg, ./img/hero-medium@2x.jpg 2x">
             <source type="image/webp" srcset="./img/hero-large.webp, ./img/hero-large@2x.webp 2x">
             <img src="./img/hero-large.jpg" srcset="./img/hero-large@2x.jpg 2x" width="1366" height="650"
               alt="Вид на антарктическую бухту и заснеженные скалы.">
@@ -121,12 +121,12 @@
             </div>
             <div class="promo__image">
               <picture>
-                <source media="(max-width: 767px)" srcset="./img/promo-small.jpg, ./img/promo-small@2x.jpg 2x">
                 <source media="(max-width: 767px)" type="image/webp"
                   srcset="./img/promo-small.webp, ./img/promo-small@2x.webp 2x">
-                <source media="(max-width: 1023px)" srcset="./img/promo-medium.jpg, ./img/promo-medium@2x.jpg 2x">
+                <source media="(max-width: 767px)" srcset="./img/promo-small.jpg, ./img/promo-small@2x.jpg 2x">
                 <source media="(max-width: 1023px)" type="image/webp"
                   srcset="./img/promo-medium.webp, ./img/promo-medium@2x.webp 2x">
+                <source media="(max-width: 1023px)" srcset="./img/promo-medium.jpg, ./img/promo-medium@2x.jpg 2x">
                 <source type="image/webp" srcset="./img/promo-large.webp, ./img/promo-large@2x.webp 2x">
                 <img src="./img/promo-large.jpg" srcset="./img/promo-large@2x.jpg 2x" width="560" height="301"
                   alt="Три пингвина на снежном склоне. Один из пинвинов растопырил крылья и смотрит прямо в камеру.">
@@ -140,13 +140,13 @@
       <section class="features" id="features">
         <div class="features__background">
           <picture>
-            <source media="(max-width: 767px)" srcset="./img/features-bg-small.jpg, ./img/features-bg-small@2x.jpg 2x">
             <source media="(max-width: 767px)" type="image/webp"
               srcset="./img/features-bg-small.webp, ./img/features-bg-small@2x.webp 2x">
-            <source media="(max-width: 1023px)"
-              srcset="./img/features-bg-medium.jpg, ./img/features-bg-medium@2x.jpg 2x">
+            <source media="(max-width: 767px)" srcset="./img/features-bg-small.jpg, ./img/features-bg-small@2x.jpg 2x">
             <source media="(max-width: 1023px)" type="image/webp"
               srcset="./img/features-bg-medium.webp, ./img/features-bg-medium@2x.webp 2x">
+            <source media="(max-width: 1023px)"
+              srcset="./img/features-bg-medium.jpg, ./img/features-bg-medium@2x.jpg 2x">
             <source type="image/webp" srcset="./img/features-bg-large.webp, ./img/features-bg-large@2x.webp 2x">
             <img src="./img/features-bg-large.jpg" srcset="./img/features-bg-large@2x.jpg 2x" width="1366" height="562"
               alt="" loading="lazy">
@@ -191,6 +191,65 @@
         </div>
       </section>
 
+      <!-- booking -->
+      <section class="booking">
+        <div class="booking__background">
+          <picture>
+            <source media="(max-width: 767px)" type="image/webp"
+              srcset="./img/booking-bg-small.webp, ./img/booking-bg-small@2x.webp 2x">
+            <source media="(max-width: 767px)" srcset="./img/booking-bg-small.jpg, ./img/booking-bg-small@2x.jpg 2x">
+            <source media="(max-width: 1023px)" type="image/webp"
+              srcset="./img/booking-bg-medium.webp, ./img/booking-bg-medium@2x.webp 2x">
+            <source media="(max-width: 1023px)" srcset="./img/booking-bg-medium.jpg, ./img/booking-bg-medium@2x.jpg 2x">
+            <source type="image/webp" srcset="./img/booking-bg-large.webp, ./img/booking-bg-large@2x.webp 2x">
+            <img src="./img/booking-bg-large.jpg" srcset="./img/booking-bg-large@2x.jpg 2x" width="1366" height="562"
+              alt="" loading="lazy">
+          </picture>
+        </div>
+        <div class="container">
+          <div class="booking__container">
+            <div class="booking__content-wrapper">
+              <h2>Раннее бронирование</h2>
+              <p>
+                Забронируйте тур за&nbsp;3-6&nbsp;месяцев<br>
+                до&nbsp;даты выезда и&nbsp;сэкономьте до&nbsp;50%
+              </p>
+            </div>
+
+            <!-- form -->
+            <article class="booking__form form" data-form-validate data-callback="base">
+              <h3>Оставьте заявку и&nbsp;мы&nbsp;свяжемся с&nbsp;вами в&nbsp;ближайшее время</h3>
+              <form action="https://echo.htmlacademy.ru/" method="post">
+                <div class="form__validation" data-validate-type="text" data-limitation="name" data-required>
+                  <label class="visually-hidden" for="name">Ваше имя:</label>
+                  <input type="text" name="name" id="name" spellcheck="false" autocomplete="off" placeholder="Имя"
+                    required pattern="[a-zA-Zа-яёА-ЯЁ\-]{1,30}" aria-invalid="true">
+                </div>
+                <div class="form__validation" data-validate-type="phone" data-required>
+                  <label class="visually-hidden" for="phone">Ваш контактный телефон:</label>
+                  <input type="tel" name="phone" id="phone" placeholder="Телефон" autocomplete="off" required
+                    aria-invalid="true">
+                </div>
+                <div class="form__validation" data-validate-type="email" data-required>
+                  <label class="visually-hidden" for="email">Ваше адрес электронной почты:</label>
+                  <input type="text" name="email" id="email" spellcheck="false" autocomplete="off" placeholder="Email"
+                    required pattern="[\w\-\.]+@([\w-]+\.)+[\w-]{2,4}" aria-invalid="true">
+                </div>
+
+                <label for="agreement" data-validate-type="checkbox" data-required>
+                  <input class="visually-hidden" type="checkbox" name="agreement" id="agreement" required
+                    aria-invalid="true">
+                  <span></span>
+                  <span>Я согласен на&nbsp;обработку<br>моих персональных данных</span>
+                </label>
+
+                <button type="submit">Оставить заявку</button>
+              </form>
+            </article>
+          </div>
+        </div>
+      </section>
+
       <!-- contacts -->
       <section class="contacts" id="contacts">
         <h2 class="visually-hidden">Наши контакты.</h2>
@@ -199,12 +258,12 @@
             <div class="contacts__map map">
               <div class="map__fallback">
                 <picture>
-                  <source media="(max-width: 767px)" srcset="./img/map-small.jpg, ./img/map-small@2x.jpg 2x">
                   <source media="(max-width: 767px)" type="image/webp"
                     srcset="./img/map-small.webp, ./img/map-small@2x.webp 2x">
-                  <source media="(max-width: 1023px)" srcset="./img/map-medium.jpg, ./img/map-medium@2x.jpg 2x">
+                  <source media="(max-width: 767px)" srcset="./img/map-small.jpg, ./img/map-small@2x.jpg 2x">
                   <source media="(max-width: 1023px)" type="image/webp"
                     srcset="./img/map-medium.webp, ./img/map-medium@2x.webp 2x">
+                  <source media="(max-width: 1023px)" srcset="./img/map-medium.jpg, ./img/map-medium@2x.jpg 2x">
                   <source type="image/webp" srcset="./img/map-large.webp, ./img/map-large@2x.webp 2x">
                   <img src="./img/map-large.jpg" srcset="./img/map-large@2x.jpg 2x" width="560" height="306"
                     alt="г. Санкт Петербург, ул. Большая Конюшенная, 19/8." loading="lazy">
@@ -296,7 +355,6 @@
       </div>
     </footer>
   </div>
-
   <script src="js/vendor.min.js"></script>
   <script src="js/main.min.js"></script>
 </body>
