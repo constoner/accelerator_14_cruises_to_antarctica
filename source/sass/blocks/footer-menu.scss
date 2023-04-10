@@ -53,8 +53,9 @@
     width: 100%;
     height: 2px;
     background-color: rgba($link-color, 0.8);
+    transform: scale(0);
     opacity: 0;
-    transition: opacity $trans-default;
+    transition: transform $trans-default, opacity $trans-default;
     content: "";
   }
 
@@ -65,12 +66,13 @@
 
   @include hover {
     &::after {
+      transform: scale(1);
       opacity: 1;
     }
   }
 
   @include focus {
-    outline: 2px solid $color-koromiko-accent;
+    outline: 3px solid $color-koromiko-accent;
   }
 
   &:not(.bicycle):active {

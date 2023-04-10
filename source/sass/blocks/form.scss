@@ -1,0 +1,182 @@
+.form {
+  padding: 50px;
+  color: $color-alice-blue-lite;
+  background-color: $color-tangaroa-dark;
+
+  @include vp-767 {
+    padding: 40px 30px;
+    text-align: center;
+  }
+
+  & br {
+    display: none;
+  }
+
+  @include vp-767 {
+    & br {
+      display: inline;
+    }
+  }
+
+  & h3 {
+    margin: 0;
+    margin-bottom: 35px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    color: $color-alice-blue-lite;
+  }
+
+  & form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  // текстовые инпуты
+  & input {
+    width: 100%;
+    padding: 11px 16px;
+    font-family: $ff-placeholder;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: $color-tangaroa-dark;
+    background-color: $color-alice-blue-lite;
+    border: none;
+    box-shadow: none;
+    transition: box-shadow $trans-default;
+
+    &::placeholder {
+      color: rgba($color-tangaroa-dark, 0.7);
+    }
+
+    @include hover {
+      box-shadow: 0 0 0 2px $color-tangaroa-dark,
+        0 0 0 4px $color-alice-blue-lite;
+    }
+
+    @include focus {
+      outline: 3px solid $color-koromiko-accent;
+    }
+
+    &:disabled {
+      opacity: 0.3;
+      pointer-events: none;
+    }
+  }
+
+  // обертка чекбокса
+  & div + label {
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    text-align: left;
+    cursor: pointer;
+    opacity: 1;
+    transition: opacity $trans-default;
+
+    @include hover {
+      opacity: 0.6;
+    }
+  }
+
+  // стили для кастомного чекбокса
+  & input[type="checkbox"] + span {
+    position: relative;
+    display: block;
+    width: 18px;
+    height: 18px;
+    margin-right: 5px;
+    background-color: $color-alice-blue-lite;
+
+    &::before {
+      position: absolute;
+      top: 5px;
+      left: 3px;
+      display: block;
+      width: 12px;
+      height: 8px;
+      color: $color-tangaroa-dark;
+      background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 2.5L5.28571 7L11 1' stroke='%23101A56'/%3E%3C/svg%3E%0A");
+      content: "";
+      opacity: 0;
+      transition: opacity $trans-default;
+    }
+  }
+
+  // подпись кастомного чекбокса
+  & span + span {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 130%;
+  }
+
+  // состояния для кастомного чекбокса
+  & input[type="checkbox"]:checked + span {
+    &::before {
+      opacity: 1;
+    }
+  }
+}
+
+// .form input[type="checkbox"] {
+//   width: 1px;
+//   height: 1px;
+
+//   @include focus {
+//     & ~ span {
+//       outline: 3px solid $color-koromiko-accent;
+//     }
+//   }
+// }
+
+// кнопка отправки формы
+.form button {
+  margin: 0;
+  margin-top: 10px;
+  padding: 10px 10px 12px;
+  font-family: $ff-placeholder;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  color: $color-tangaroa-dark;
+  background-color: $color-alice-blue-lite;
+  border: none;
+  cursor: pointer;
+  box-shadow: none;
+  transition: box-shadow $trans-default;
+
+  @include hover {
+    box-shadow: 0 0 0 2px $color-tangaroa-dark, 0 0 0 4px $color-alice-blue-lite;
+  }
+
+  @include focus {
+    outline: 3px solid $color-koromiko-accent;
+  }
+
+  &:not(.bicycle:hover):active {
+    opacity: 0.2;
+  }
+
+  &:disabled,
+  &.disabled {
+    opacity: 0.6;
+    pointer-events: none;
+  }
+
+  // стили для валидации
+  $color-error: $color-burnt-sienna;
+
+  & .is-invalid input {
+    box-shadow: 0 0 0 2px $color-tangaroa-dark, 0 0 0 4px $color-error;
+  }
+
+  & .is-valid input {
+    box-shadow: 0 0 0 2px $color-tangaroa-dark, 0 0 0 4px $color-pastel-green;
+  }
+
+  & .is-invalid input[type="checkbox"] + span {
+    background-color: $color-error;
+  }
+}

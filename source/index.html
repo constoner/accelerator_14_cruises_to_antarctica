@@ -191,6 +191,65 @@
         </div>
       </section>
 
+      <!-- booking -->
+      <section class="booking">
+        <div class="booking__background">
+          <picture>
+            <source media="(max-width: 767px)" type="image/webp"
+              srcset="./img/booking-bg-small.webp, ./img/booking-bg-small@2x.webp 2x">
+            <source media="(max-width: 767px)" srcset="./img/booking-bg-small.jpg, ./img/booking-bg-small@2x.jpg 2x">
+            <source media="(max-width: 1023px)" type="image/webp"
+              srcset="./img/booking-bg-medium.webp, ./img/booking-bg-medium@2x.webp 2x">
+            <source media="(max-width: 1023px)" srcset="./img/booking-bg-medium.jpg, ./img/booking-bg-medium@2x.jpg 2x">
+            <source type="image/webp" srcset="./img/booking-bg-large.webp, ./img/booking-bg-large@2x.webp 2x">
+            <img src="./img/booking-bg-large.jpg" srcset="./img/booking-bg-large@2x.jpg 2x" width="1366" height="562"
+              alt="" loading="lazy">
+          </picture>
+        </div>
+        <div class="container">
+          <div class="booking__container">
+            <div class="booking__content-wrapper">
+              <h2>Раннее бронирование</h2>
+              <p>
+                Забронируйте тур за&nbsp;3-6&nbsp;месяцев<br>
+                до&nbsp;даты выезда и&nbsp;сэкономьте до&nbsp;50%
+              </p>
+            </div>
+
+            <!-- form -->
+            <article class="booking__form form" data-form-validate data-callback="base">
+              <h3>Оставьте заявку и&nbsp;мы&nbsp;свяжемся с&nbsp;вами в&nbsp;ближайшее время</h3>
+              <form action="https://echo.htmlacademy.ru/" method="post">
+                <div class="form__validation" data-validate-type="text" data-limitation="name" data-required>
+                  <label class="visually-hidden" for="name">Ваше имя:</label>
+                  <input type="text" name="name" id="name" spellcheck="false" autocomplete="off" placeholder="Имя"
+                    required pattern="[a-zA-Zа-яёА-ЯЁ\-]{1,30}" aria-invalid="true">
+                </div>
+                <div class="form__validation" data-validate-type="phone" data-required>
+                  <label class="visually-hidden" for="phone">Ваш контактный телефон:</label>
+                  <input type="tel" name="phone" id="phone" placeholder="Телефон" autocomplete="off" required
+                    aria-invalid="true">
+                </div>
+                <div class="form__validation" data-validate-type="email" data-required>
+                  <label class="visually-hidden" for="email">Ваше адрес электронной почты:</label>
+                  <input type="text" name="email" id="email" spellcheck="false" autocomplete="off" placeholder="Email"
+                    required pattern="[\w\-\.]+@([\w-]+\.)+[\w-]{2,4}" aria-invalid="true">
+                </div>
+
+                <label for="agreement" data-validate-type="checkbox" data-required>
+                  <input class="visually-hidden" type="checkbox" name="agreement" id="agreement" required
+                    aria-invalid="true">
+                  <span></span>
+                  <span>Я согласен на&nbsp;обработку<br>моих персональных данных</span>
+                </label>
+
+                <button type="submit">Оставить заявку</button>
+              </form>
+            </article>
+          </div>
+        </div>
+      </section>
+
       <!-- contacts -->
       <section class="contacts" id="contacts">
         <h2 class="visually-hidden">Наши контакты.</h2>
