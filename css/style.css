@@ -1250,7 +1250,7 @@ button,
   gap: 20px;
 }
 
-.form input {
+.form label + input {
   width: 100%;
   padding: 11px 16px;
   font-family: "Montserrat", "Trebuchet MS", sans-serif;
@@ -1269,31 +1269,31 @@ button,
   transition: box-shadow 0.2s ease-out, -webkit-box-shadow 0.2s ease-out;
 }
 
-.form input::-webkit-input-placeholder {
+.form label + input::-webkit-input-placeholder {
   color: rgba(1, 28, 64, 0.7);
 }
 
-.form input::-moz-placeholder {
+.form label + input::-moz-placeholder {
   color: rgba(1, 28, 64, 0.7);
 }
 
-.form input:-ms-input-placeholder {
+.form label + input:-ms-input-placeholder {
   color: rgba(1, 28, 64, 0.7);
 }
 
-.form input::-ms-input-placeholder {
+.form label + input::-ms-input-placeholder {
   color: rgba(1, 28, 64, 0.7);
 }
 
-.form input::placeholder {
+.form label + input::placeholder {
   color: rgba(1, 28, 64, 0.7);
 }
 
-.form input.focus-visible:focus {
+.form label + input.focus-visible:focus {
   outline: 3px solid #ffb451;
 }
 
-.form input:disabled {
+.form label + input:disabled {
   opacity: 0.3;
   pointer-events: none;
 }
@@ -1302,9 +1302,8 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  -ms-grid-column-align: start;
+  justify-self: start;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -2117,7 +2116,7 @@ button,
     opacity: 0.6;
   }
 
-  .form input:hover:not(.focus-visible) {
+  .form label + input:hover:not(.focus-visible) {
     -webkit-box-shadow: 0 0 0 2px #011c40, 0 0 0 4px #f9fbfd;
     box-shadow: 0 0 0 2px #011c40, 0 0 0 4px #f9fbfd;
   }
