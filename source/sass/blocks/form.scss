@@ -34,7 +34,7 @@
   }
 
   // текстовые инпуты
-  & input {
+  & label + input {
     width: 100%;
     padding: 11px 16px;
     font-family: $ff-placeholder;
@@ -69,7 +69,7 @@
   // обертка чекбокса
   & div + label {
     display: flex;
-    width: fit-content;
+    justify-self: start;
     align-items: center;
     text-align: left;
     cursor: pointer;
