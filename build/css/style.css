@@ -1154,6 +1154,100 @@ button,
   object-fit: contain;
 }
 
+.next-cruises {
+  padding: 95px 0 120px;
+}
+
+.next-cruises h2 {
+  margin: 0;
+  margin-bottom: 60px;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 150%;
+  text-align: center;
+}
+
+.next-cruises__list {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 30px;
+  margin: 0;
+  padding: 0 15px;
+  list-style-type: none;
+}
+
+.product-card {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 0;
+  margin: 0 auto;
+  padding-bottom: 148.46%;
+  background-color: #e3ecf6;
+}
+
+.product-card::before {
+  position: absolute;
+  z-index: 3;
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(1, 28, 64, 0)), to(#011c40));
+  background-image: -o-linear-gradient(top, rgba(1, 28, 64, 0) 50%, #011c40 100%);
+  background-image: linear-gradient(180deg, rgba(1, 28, 64, 0) 50%, #011c40 100%);
+  content: "";
+}
+
+.product-card__image {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.product-card__image img {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  width: 100%;
+  height: auto;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+
+.product-card__title {
+  position: absolute;
+  z-index: 4;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  padding: 30px;
+}
+
+.product-card__title h3 {
+  margin: 0;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 150%;
+  color: #f9fbfd;
+}
+
 .booking {
   position: relative;
   padding: 50px 0;

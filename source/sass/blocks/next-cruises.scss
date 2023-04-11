@@ -1,0 +1,22 @@
+.next-cruises {
+  padding: 95px 0 120px;
+}
+
+.next-cruises h2 {
+  margin: 0;
+  margin-bottom: 60px;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 150%;
+  text-align: center;
+}
+
+.next-cruises__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 30px;
+  margin: 0;
+  padding: 0 15px;
+  list-style-type: none;
+}
+
