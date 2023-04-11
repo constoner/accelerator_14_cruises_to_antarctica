@@ -120,16 +120,13 @@
   }
 }
 
-// .form input[type="checkbox"] {
-//   width: 1px;
-//   height: 1px;
-
-//   @include focus {
-//     & ~ span {
-//       outline: 3px solid $color-koromiko-accent;
-//     }
-//   }
-// }
+.form input[type="checkbox"] {
+  @include focus {
+    & ~ span {
+      outline: 3px solid $color-koromiko-accent;
+    }
+  }
+}
 
 // кнопка отправки формы
 .form button {
@@ -164,19 +161,19 @@
     opacity: 0.6;
     pointer-events: none;
   }
+}
 
   // стили для валидации
   $color-error: $color-burnt-sienna;
 
-  & .is-invalid input {
+  .form .is-invalid > input {
     box-shadow: 0 0 0 2px $color-tangaroa-dark, 0 0 0 4px $color-error;
   }
 
-  & .is-valid input {
+  .form .is-valid > input {
     box-shadow: 0 0 0 2px $color-tangaroa-dark, 0 0 0 4px $color-pastel-green;
   }
 
-  & .is-invalid input[type="checkbox"] + span {
+  .form .is-invalid > input[type="checkbox"] + span {
     background-color: $color-error;
   }
-}

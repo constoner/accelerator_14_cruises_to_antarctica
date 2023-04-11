@@ -1350,6 +1350,10 @@ button,
   opacity: 1;
 }
 
+.form input[type=checkbox].focus-visible:focus ~ span {
+  outline: 3px solid #ffb451;
+}
+
 .form button {
   margin: 0;
   margin-top: 10px;
@@ -1385,17 +1389,17 @@ button,
   pointer-events: none;
 }
 
-.form button .is-invalid input {
+.form .is-invalid > input {
   -webkit-box-shadow: 0 0 0 2px #011c40, 0 0 0 4px #f27a5c;
   box-shadow: 0 0 0 2px #011c40, 0 0 0 4px #f27a5c;
 }
 
-.form button .is-valid input {
+.form .is-valid > input {
   -webkit-box-shadow: 0 0 0 2px #011c40, 0 0 0 4px #7cde8b;
   box-shadow: 0 0 0 2px #011c40, 0 0 0 4px #7cde8b;
 }
 
-.form button .is-invalid input[type=checkbox] + span {
+.form .is-invalid > input[type=checkbox] + span {
   background-color: #f27a5c;
 }
 
