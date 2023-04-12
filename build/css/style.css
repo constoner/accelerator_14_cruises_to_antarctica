@@ -1195,6 +1195,9 @@ button,
   -o-transition: transform 0.2s ease-out;
   transition: transform 0.2s ease-out;
   transition: transform 0.2s ease-out, -webkit-transform 0.2s ease-out;
+  -webkit-transition-delay: 0.3s;
+  -o-transition-delay: 0.3s;
+  transition-delay: 0.3s;
   -webkit-transform: translateX(0);
   -ms-transform: translateX(0);
   transform: translateX(0);
