@@ -1185,6 +1185,23 @@ button,
   margin: 0 auto;
   padding-bottom: 148.46%;
   background-color: #e3ecf6;
+  overflow: hidden;
+}
+
+.product-card:hover .product-card__content,
+.product-card:focus-within .product-card__content {
+  -webkit-transition: -webkit-transform 0.2s ease-out;
+  transition: -webkit-transform 0.2s ease-out;
+  -o-transition: transform 0.2s ease-out;
+  transition: transform 0.2s ease-out;
+  transition: transform 0.2s ease-out, -webkit-transform 0.2s ease-out;
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+}
+
+.product-card:focus {
+  outline: 3px solid #ffb451;
 }
 
 .product-card::before {
@@ -1246,6 +1263,115 @@ button,
   font-size: 18px;
   line-height: 150%;
   color: #f9fbfd;
+}
+
+.product-card__content {
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding: 35px 25px;
+  color: #f9fbfd;
+  background-color: #011c40;
+  overflow: auto;
+  -webkit-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  transform: translateX(100%);
+  -webkit-transition: -webkit-transform 0.2s ease-in;
+  transition: -webkit-transform 0.2s ease-in;
+  -o-transition: transform 0.2s ease-in;
+  transition: transform 0.2s ease-in;
+  transition: transform 0.2s ease-in, -webkit-transform 0.2s ease-in;
+  -webkit-transition-delay: 0.5s;
+  -o-transition-delay: 0.5s;
+  transition-delay: 0.5s;
+}
+
+.product-card__content h4 {
+  margin: 0;
+  margin-bottom: 25px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 150%;
+  color: #f9fbfd;
+}
+
+.product-card__content dt {
+  margin-top: 20px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 140%;
+}
+
+.product-card__content dd {
+  margin: 0;
+  margin-top: 10px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  color: #d8d8d9;
+}
+
+.product-card__content a {
+  display: block;
+  width: 100%;
+  margin: 0;
+  margin-top: 30px;
+  padding: 8px 10px 11px;
+  font-family: "Montserrat", "Trebuchet MS", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  color: #011c40;
+  background-color: #f9fbfd;
+  border: none;
+  cursor: pointer;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -webkit-transition: -webkit-box-shadow 0.2s ease-out;
+  transition: -webkit-box-shadow 0.2s ease-out;
+  -o-transition: box-shadow 0.2s ease-out;
+  transition: box-shadow 0.2s ease-out;
+  transition: box-shadow 0.2s ease-out, -webkit-box-shadow 0.2s ease-out;
+}
+
+.product-card__content a.focus-visible:focus {
+  outline: 3px solid #ffb451;
+}
+
+.product-card__content a:not(.bicycle:hover):active {
+  opacity: 0.2;
+}
+
+.product-card__content a:disabled,
+.product-card__content a.disabled {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.product-card__content::-webkit-scrollbar {
+  width: 4px;
+}
+
+.product-card__content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.product-card__content::-webkit-scrollbar-thumb {
+  background-color: rgba(155, 155, 155, 0.8);
+  border-radius: 20px;
+  border: transparent;
+}
+
+.product-card__content::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(155, 155, 155, 0.6);
+}
+
+.product-card__content::-webkit-scrollbar-thumb:active {
+  background-color: rgba(155, 155, 155, 0.4);
 }
 
 .booking {
@@ -2220,6 +2346,11 @@ button,
 
   .btn:hover:not(.focus-visible) {
     opacity: 0.6;
+  }
+
+  .product-card__content a:hover:not(.focus-visible) {
+    -webkit-box-shadow: 0 0 0 2px #011c40, 0 0 0 4px #f9fbfd;
+    box-shadow: 0 0 0 2px #011c40, 0 0 0 4px #f9fbfd;
   }
 
   .form label + input:hover:not(.focus-visible) {

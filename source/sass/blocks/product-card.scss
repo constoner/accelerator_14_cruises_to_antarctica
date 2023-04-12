@@ -1,3 +1,4 @@
+// карточка товара
 .product-card {
   position: relative;
   z-index: 1;
@@ -6,6 +7,7 @@
   margin: 0 auto;
   padding-bottom: 148.46%;
   background-color: $color-solitude-lite;
+  overflow: hidden;
 
   @include vp-1023 {
     padding-bottom: 124.92%;
@@ -15,6 +17,20 @@
     padding-bottom: 142.96%;
   }
 
+  // стили для состояния карточки
+  &:hover,
+  &:focus-within {
+    & .product-card__content {
+      transition: transform $trans-default;
+      transform: translateX(0);
+    }
+  }
+
+  &:focus {
+    outline: 3px solid $color-koromiko-accent;
+  }
+
+  // градиент для затенения фона
   &::before {
     position: absolute;
     z-index: 3;
@@ -32,6 +48,7 @@
   }
 }
 
+// фоновая картинка карточки
 .product-card__image {
   position: absolute;
   z-index: 2;
@@ -39,9 +56,6 @@
   bottom: 0;
   left: 0;
   right: 0;
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
 
   & img {
     flex-grow: 1;
@@ -51,6 +65,7 @@
   }
 }
 
+// надпись по фоновой картинке на лицевой стороне карточки
 .product-card__title {
   position: absolute;
   z-index: 4;
@@ -69,5 +84,108 @@
     font-size: 18px;
     line-height: 150%;
     color: $color-alice-blue-lite;
+  }
+}
+
+// внутренняя часть карточки - открыывается по ховеру и фокусу
+.product-card__content {
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding: 35px 25px;
+  color: $color-alice-blue-lite;
+  background-color: $color-tangaroa-dark;
+  overflow: auto;
+  transform: translateX(100%);
+  transition: transform $trans-reverse;
+  transition-delay: 0.5s;
+
+  // стили для контента
+  & h4 {
+    margin: 0;
+    margin-bottom: 25px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 150%;
+    color: $color-alice-blue-lite;
+  }
+
+  & dt {
+    margin-top: 20px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 140%;
+  }
+
+  & dd {
+    margin: 0;
+    margin-top: 10px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    color: $color-quartz;
+  }
+
+  // кнопка в карточке и ее стили
+  a {
+    display: block;
+    width: 100%;
+    margin: 0;
+    margin-top: 30px;
+    padding: 8px 10px 11px;
+    font-family: $ff-placeholder;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+    color: $color-tangaroa-dark;
+    background-color: $color-alice-blue-lite;
+    border: none;
+    cursor: pointer;
+    box-shadow: none;
+    transition: box-shadow $trans-default;
+
+    @include hover {
+      box-shadow: 0 0 0 2px $color-tangaroa-dark,
+        0 0 0 4px $color-alice-blue-lite;
+    }
+
+    @include focus {
+      outline: 3px solid $color-koromiko-accent;
+    }
+
+    &:not(.bicycle:hover):active {
+      opacity: 0.2;
+    }
+
+    &:disabled,
+    &.disabled {
+      opacity: 0.6;
+      pointer-events: none;
+    }
+  }
+
+  // стили для скроллбара в хроме и сафари
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(155, 155, 155, 0.8);
+    border-radius: 20px;
+    border: transparent;
+
+    &:hover {
+      background-color: rgba(155, 155, 155, 0.6);
+    }
+
+    &:active {
+      background-color: rgba(155, 155, 155, 0.4);
+    }
   }
 }
