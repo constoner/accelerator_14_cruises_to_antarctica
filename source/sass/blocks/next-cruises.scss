@@ -1,15 +1,33 @@
 .next-cruises {
   padding: 95px 0 120px;
+
+  @include vp-1023 {
+    padding: 100px 0;
+  }
+
+  @include vp-767 {
+    padding: 65px 0;
+  }
+
+  & h2 {
+    margin: 0;
+    margin-bottom: 60px;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 150%;
+    text-align: center;
+
+    @include vp-1023 {
+      font-size: 26px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 40px;
+      font-size: 24px;
+    }
+  }
 }
 
-.next-cruises h2 {
-  margin: 0;
-  margin-bottom: 60px;
-  font-weight: 600;
-  font-size: 28px;
-  line-height: 150%;
-  text-align: center;
-}
 
 .next-cruises__list {
   display: grid;
@@ -18,5 +36,9 @@
   margin: 0;
   padding: 0 15px;
   list-style-type: none;
+
+  @include vp-767 {
+    padding: 0 10px;
+  }
 }
 
