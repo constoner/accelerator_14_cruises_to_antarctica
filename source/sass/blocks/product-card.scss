@@ -7,6 +7,14 @@
   padding-bottom: 148.46%;
   background-color: $color-solitude-lite;
 
+  @include vp-1023 {
+    padding-bottom: 124.92%;
+  }
+
+  @include vp-767 {
+    padding-bottom: 142.96%;
+  }
+
   &::before {
     position: absolute;
     z-index: 3;

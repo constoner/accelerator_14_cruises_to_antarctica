@@ -1879,6 +1879,10 @@ button,
     margin-bottom: 24px;
   }
 
+  .product-card {
+    padding-bottom: 124.92%;
+  }
+
   .booking {
     padding: 100px 0;
   }
@@ -2093,6 +2097,10 @@ button,
   .features__item {
     min-height: 250px;
     padding: 25px 15px 25px 20px;
+  }
+
+  .product-card {
+    padding-bottom: 142.96%;
   }
 
   .booking {
