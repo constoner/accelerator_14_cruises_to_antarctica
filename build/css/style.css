@@ -1190,6 +1190,9 @@ button,
 
 .product-card:hover .product-card__content,
 .product-card:focus-within .product-card__content {
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
   -webkit-transition: -webkit-transform 0.2s ease-out;
   transition: -webkit-transform 0.2s ease-out;
   -o-transition: transform 0.2s ease-out;
@@ -1198,9 +1201,6 @@ button,
   -webkit-transition-delay: 0.3s;
   -o-transition-delay: 0.3s;
   transition-delay: 0.3s;
-  -webkit-transform: translateX(0);
-  -ms-transform: translateX(0);
-  transform: translateX(0);
 }
 
 .product-card:focus {
@@ -1279,6 +1279,7 @@ button,
   color: #f9fbfd;
   background-color: #011c40;
   overflow: auto;
+  will-change: transform;
   -webkit-transform: translateX(100%);
   -ms-transform: translateX(100%);
   transform: translateX(100%);
@@ -1287,9 +1288,8 @@ button,
   -o-transition: transform 0.2s ease-in;
   transition: transform 0.2s ease-in;
   transition: transform 0.2s ease-in, -webkit-transform 0.2s ease-in;
-  -webkit-transition-delay: 0.5s;
-  -o-transition-delay: 0.5s;
-  transition-delay: 0.5s;
+  scrollbar-color: rgba(155, 155, 155, 0.8);
+  scrollbar-width: thin;
 }
 
 .product-card__content h4 {

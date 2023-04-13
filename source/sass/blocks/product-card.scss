@@ -21,9 +21,9 @@
   &:hover,
   &:focus-within {
     & .product-card__content {
+      transform: translateX(0);
       transition: transform $trans-default;
       transition-delay: 0.3s;
-      transform: translateX(0);
     }
   }
 
@@ -108,9 +108,9 @@
   color: $color-alice-blue-lite;
   background-color: $color-tangaroa-dark;
   overflow: auto;
+  will-change: transform;
   transform: translateX(100%);
   transition: transform $trans-reverse;
-  transition-delay: 0.5s;
 
   @include vp-1023 {
     padding: 35px;
@@ -185,7 +185,10 @@
     }
   }
 
-  // стили для скроллбара в хроме и сафари
+  // стили для скроллбара
+  scrollbar-color: rgba(155, 155, 155, 0.8);
+  scrollbar-width: thin;
+
   &::-webkit-scrollbar {
     width: 4px;
   }
