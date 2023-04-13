@@ -107,7 +107,8 @@
   padding: 35px 25px;
   color: $color-alice-blue-lite;
   background-color: $color-tangaroa-dark;
-  overflow: auto;
+  display: flex;
+  flex-direction: column;
   will-change: transform;
   transform: translateX(100%);
   transition: transform $trans-reverse;
@@ -151,7 +152,7 @@
     display: block;
     width: 100%;
     margin: 0;
-    margin-top: 30px;
+    margin-top: 10px;
     padding: 8px 10px 11px;
     font-family: $ff-placeholder;
     font-weight: 600;
@@ -183,6 +184,53 @@
       opacity: 0.6;
       pointer-events: none;
     }
+  }
+
+  // стили для скроллбара
+  scrollbar-color: rgba(155, 155, 155, 0.8);
+  scrollbar-width: thin;
+
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(155, 155, 155, 0.8);
+    border-radius: 20px;
+    border: transparent;
+
+    &:hover {
+      background-color: rgba(155, 155, 155, 0.6);
+    }
+
+    &:active {
+      background-color: rgba(155, 155, 155, 0.4);
+    }
+  }
+}
+
+.product-card__inner-content {
+  flex-grow: 1;
+  overflow: auto;
+
+  // стили для контента
+
+  & dt {
+    margin-top: 20px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 140%;
+  }
+
+  & dd {
+    margin: 0;
+    margin-top: 10px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    color: $color-quartz;
   }
 
   // стили для скроллбара

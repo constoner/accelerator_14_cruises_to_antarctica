@@ -1278,7 +1278,13 @@ button,
   padding: 35px 25px;
   color: #f9fbfd;
   background-color: #011c40;
-  overflow: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
   will-change: transform;
   -webkit-transform: translateX(100%);
   -ms-transform: translateX(100%);
@@ -1321,7 +1327,7 @@ button,
   display: block;
   width: 100%;
   margin: 0;
-  margin-top: 30px;
+  margin-top: 10px;
   padding: 8px 10px 11px;
   font-family: "Montserrat", "Trebuchet MS", sans-serif;
   font-weight: 600;
@@ -1374,6 +1380,53 @@ button,
 }
 
 .product-card__content::-webkit-scrollbar-thumb:active {
+  background-color: rgba(155, 155, 155, 0.4);
+}
+
+.product-card__inner-content {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  overflow: auto;
+  scrollbar-color: rgba(155, 155, 155, 0.8);
+  scrollbar-width: thin;
+}
+
+.product-card__inner-content dt {
+  margin-top: 20px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 140%;
+}
+
+.product-card__inner-content dd {
+  margin: 0;
+  margin-top: 10px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  color: #d8d8d9;
+}
+
+.product-card__inner-content::-webkit-scrollbar {
+  width: 4px;
+}
+
+.product-card__inner-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.product-card__inner-content::-webkit-scrollbar-thumb {
+  background-color: rgba(155, 155, 155, 0.8);
+  border-radius: 20px;
+  border: transparent;
+}
+
+.product-card__inner-content::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(155, 155, 155, 0.6);
+}
+
+.product-card__inner-content::-webkit-scrollbar-thumb:active {
   background-color: rgba(155, 155, 155, 0.4);
 }
 
