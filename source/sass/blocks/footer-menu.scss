@@ -2,7 +2,6 @@
   display: flex;
   flex-wrap: wrap;
   list-style-type: none;
-  margin: 0;
   padding: 0;
 
   @include vp-767 {
@@ -28,7 +27,7 @@
   @include vp-767 {
     &:not(:last-child) {
       margin: 0;
-      margin-bottom: 13px;
+      margin-bottom: 16px;
     }
   }
 }

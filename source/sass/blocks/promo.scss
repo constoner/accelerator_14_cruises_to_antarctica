@@ -6,7 +6,7 @@
   }
 
   @include vp-767 {
-    padding: 65px 0 85px;
+    padding: 66px 0 85px;
   }
 }
 
@@ -14,6 +14,7 @@
   display: grid;
   grid-template-columns: 1fr 48.28%;
   gap: 40px 70px;
+  align-items: center;
 
   @include vp-1023 {
     grid-template-columns: 1fr 47.79%;
@@ -27,18 +28,25 @@
 }
 
 .promo__content {
+  margin-top: -4px;
+
+  @include vp-1023 {
+    margin-top: -9px;
+    margin-bottom: -6px;
+  }
+
   h2 {
     margin: 0;
-    margin-bottom: 40px;
+    margin-bottom: 23px;
     font-weight: 600;
     font-size: 28px;
     line-height: 150%;
 
     @include vp-1023 {
       max-width: 210px;
-      margin-bottom: 30px;
+      margin-bottom: 15px;
       font-size: 26px;
-      line-height: 140%;
+      line-height: 139%;
     }
 
     @include vp-767 {
@@ -56,6 +64,7 @@
 
 .promo__image {
   width: 100%;
+  align-self: start;
 
   img {
     width: 100%;

@@ -1010,6 +1010,7 @@ button,
 
 .hero__container {
   position: relative;
+  margin-top: -8px;
   padding-left: 95px;
 }
 
@@ -1022,7 +1023,7 @@ button,
 
 .hero__container h1 {
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 12px;
   font-weight: 700;
   font-size: 54px;
   line-height: 66px;
@@ -1045,11 +1046,18 @@ button,
   -ms-grid-columns: 1fr 48.28%;
   grid-template-columns: 1fr 48.28%;
   gap: 40px 70px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.promo__content {
+  margin-top: -4px;
 }
 
 .promo__content h2 {
   margin: 0;
-  margin-bottom: 40px;
+  margin-bottom: 23px;
   font-weight: 600;
   font-size: 28px;
   line-height: 150%;
@@ -1063,6 +1071,9 @@ button,
 
 .promo__image {
   width: 100%;
+  -ms-flex-item-align: start;
+  -ms-grid-row-align: start;
+  align-self: start;
 }
 
 .promo__image img {
@@ -1101,7 +1112,8 @@ button,
 
 .features h2 {
   margin: 0;
-  margin-bottom: 40px;
+  margin-top: -3px;
+  margin-bottom: 56px;
   font-weight: 600;
   font-size: 28px;
   line-height: 100%;
@@ -1120,13 +1132,13 @@ button,
 
 .features__item {
   padding: 30px;
-  padding-bottom: 50px;
+  padding-bottom: 45px;
   background-color: #f9fbfd;
 }
 
 .features__item h3 {
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 13px;
   font-weight: 500;
   font-size: 18px;
   line-height: 100%;
@@ -1135,12 +1147,12 @@ button,
 .features__item p {
   margin: 0;
   font-size: 14px;
-  line-height: 126.8%;
+  line-height: 142.8%;
 }
 
 .features__icon {
   height: 32px;
-  margin-bottom: 25px;
+  margin-bottom: 23px;
 }
 
 .features__icon svg,
@@ -1160,7 +1172,8 @@ button,
 
 .next-cruises h2 {
   margin: 0;
-  margin-bottom: 60px;
+  margin-top: -10px;
+  margin-bottom: 49px;
   font-weight: 600;
   font-size: 28px;
   line-height: 150%;
@@ -1186,6 +1199,15 @@ button,
   padding-bottom: 148.46%;
   background-color: #e3ecf6;
   overflow: hidden;
+  will-change: box-shadow;
+  -webkit-box-shadow: 0 4px 35px rgba(1, 28, 64, 0);
+  box-shadow: 0 4px 35px rgba(1, 28, 64, 0);
+}
+
+.product-card:hover,
+.product-card:focus-within {
+  -webkit-box-shadow: 0 4px 35px rgba(1, 28, 64, 0.15);
+  box-shadow: 0 4px 35px rgba(1, 28, 64, 0.15);
 }
 
 .product-card:hover .product-card__content,
@@ -1258,6 +1280,7 @@ button,
   -ms-flex-pack: end;
   justify-content: flex-end;
   padding: 30px;
+  padding-bottom: 22px;
 }
 
 .product-card__title h3 {
@@ -1294,33 +1317,6 @@ button,
   -o-transition: transform 0.2s ease-in;
   transition: transform 0.2s ease-in;
   transition: transform 0.2s ease-in, -webkit-transform 0.2s ease-in;
-  scrollbar-color: rgba(155, 155, 155, 0.8);
-  scrollbar-width: thin;
-}
-
-.product-card__content h4 {
-  margin: 0;
-  margin-bottom: 25px;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 150%;
-  color: #f9fbfd;
-}
-
-.product-card__content dt {
-  margin-top: 20px;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 140%;
-}
-
-.product-card__content dd {
-  margin: 0;
-  margin-top: 10px;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 140%;
-  color: #d8d8d9;
 }
 
 .product-card__content a {
@@ -1328,11 +1324,11 @@ button,
   width: 100%;
   margin: 0;
   margin-top: 10px;
-  padding: 8px 10px 11px;
+  padding: 11px 10px 11px;
   font-family: "Montserrat", "Trebuchet MS", sans-serif;
   font-weight: 600;
   font-size: 14px;
-  line-height: 21px;
+  line-height: 18px;
   text-align: center;
   color: #011c40;
   background-color: #f9fbfd;
@@ -1361,39 +1357,36 @@ button,
   pointer-events: none;
 }
 
-.product-card__content::-webkit-scrollbar {
-  width: 4px;
-}
-
-.product-card__content::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-.product-card__content::-webkit-scrollbar-thumb {
-  background-color: rgba(155, 155, 155, 0.8);
-  border-radius: 20px;
-  border: transparent;
-}
-
-.product-card__content::-webkit-scrollbar-thumb:hover {
-  background-color: rgba(155, 155, 155, 0.6);
-}
-
-.product-card__content::-webkit-scrollbar-thumb:active {
-  background-color: rgba(155, 155, 155, 0.4);
-}
-
 .product-card__inner-content {
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
   overflow: auto;
+  margin-right: -5px;
   scrollbar-color: rgba(155, 155, 155, 0.8);
   scrollbar-width: thin;
 }
 
+.product-card__inner-content.focus-visible:focus {
+  outline: 3px solid #ffb451;
+}
+
+.product-card__inner-content h4 {
+  margin: 0;
+  margin-top: -7px;
+  margin-bottom: 14px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 150%;
+  color: #f9fbfd;
+}
+
+.product-card__inner-content dl {
+  margin: 0;
+}
+
 .product-card__inner-content dt {
-  margin-top: 20px;
+  margin-bottom: 3px;
   font-weight: 500;
   font-size: 14px;
   line-height: 140%;
@@ -1401,11 +1394,15 @@ button,
 
 .product-card__inner-content dd {
   margin: 0;
-  margin-top: 10px;
+  margin-bottom: 10px;
   font-weight: 400;
   font-size: 14px;
   line-height: 140%;
   color: #d8d8d9;
+}
+
+.product-card__inner-content dd:last-child {
+  margin-bottom: 0;
 }
 
 .product-card__inner-content::-webkit-scrollbar {
@@ -1468,6 +1465,7 @@ button,
 }
 
 .booking__content-wrapper {
+  margin-top: -7px;
   margin-right: 60px;
   -ms-flex-negative: 1;
   flex-shrink: 1;
@@ -1475,7 +1473,7 @@ button,
 
 .booking__content-wrapper h2 {
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 8px;
   font-weight: 700;
   font-size: 40px;
   line-height: 150%;
@@ -1511,7 +1509,8 @@ button,
 
 .form h3 {
   margin: 0;
-  margin-bottom: 35px;
+  margin-top: -6px;
+  margin-bottom: 27px;
   font-weight: 500;
   font-size: 18px;
   line-height: 27px;
@@ -1702,11 +1701,12 @@ button,
 
 .contacts__address-wrapper {
   width: 43.1%;
+  margin-top: -2px;
 }
 
 .contacts__address-wrapper > p {
   margin: 0;
-  margin-bottom: 45px;
+  margin-bottom: 33px;
   font-weight: 500;
   font-size: 18px;
   line-height: 150%;
@@ -1714,7 +1714,7 @@ button,
 
 .contacts__item {
   position: relative;
-  margin-top: 33px;
+  margin-top: 20px;
 }
 
 .contacts__item img {
@@ -1735,6 +1735,11 @@ button,
 .contacts__address a.focus-visible:focus,
 .contacts__address p.focus-visible:focus {
   outline: 3px solid #ffb451;
+}
+
+.contacts__address a > br,
+.contacts__address p > br {
+  display: none;
 }
 
 .map {
@@ -1777,6 +1782,7 @@ button,
 
 .footer {
   padding: 50px 0;
+  padding-bottom: 36px;
   color: #f9fbfd;
   background-color: #011c40;
 }
@@ -1796,12 +1802,15 @@ button,
 
 .footer__social-list {
   margin: 0;
+  margin-top: 4px;
   margin-left: auto;
   margin-right: -13.5px;
 }
 
 .footer__menu {
   height: 100%;
+  margin-top: 2px;
+  margin-left: -4px;
 }
 
 .footer-menu {
@@ -1811,7 +1820,6 @@ button,
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   list-style-type: none;
-  margin: 0;
   padding: 0;
 }
 
@@ -1985,8 +1993,8 @@ button,
   }
 
   .menu__link {
-    font-size: 12px;
-    line-height: 15px;
+    font-size: 14px;
+    line-height: 17px;
   }
 
   .hero {
@@ -1996,6 +2004,7 @@ button,
   }
 
   .hero__container {
+    margin-top: -7px;
     padding-left: 0;
   }
 
@@ -2006,7 +2015,7 @@ button,
   }
 
   .hero__container h1 {
-    margin-bottom: 29px;
+    margin-bottom: 12px;
     font-size: 50px;
     line-height: 61px;
   }
@@ -2026,11 +2035,16 @@ button,
     gap: 30px 30px;
   }
 
+  .promo__content {
+    margin-top: -9px;
+    margin-bottom: -6px;
+  }
+
   .promo__content h2 {
     max-width: 210px;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     font-size: 26px;
-    line-height: 140%;
+    line-height: 139%;
   }
 
   .features {
@@ -2038,7 +2052,8 @@ button,
   }
 
   .features h2 {
-    margin-bottom: 52px;
+    margin-top: -4px;
+    margin-bottom: 56px;
     font-size: 26px;
   }
 
@@ -2048,7 +2063,7 @@ button,
   }
 
   .features__item {
-    padding: 26px 16px 25px 20px;
+    padding: 26px 16px 19px 20px;
   }
 
   .features__item h3 {
@@ -2058,7 +2073,7 @@ button,
 
   .features__icon {
     height: 26px;
-    margin-bottom: 24px;
+    margin-bottom: 18px;
   }
 
   .next-cruises {
@@ -2075,6 +2090,7 @@ button,
 
   .product-card__title {
     padding: 35px;
+    padding-bottom: 28px;
   }
 
   .product-card__content {
@@ -2094,13 +2110,14 @@ button,
   }
 
   .booking__content-wrapper {
+    margin-top: -13px;
     margin-right: 0;
-    margin-bottom: 60px;
+    margin-bottom: 53px;
     text-align: center;
   }
 
   .booking__content-wrapper h2 {
-    margin-bottom: 25px;
+    margin-bottom: 5px;
     font-size: 34px;
   }
 
@@ -2115,10 +2132,20 @@ button,
 
   .contacts__address-wrapper {
     width: 47.79%;
+    margin-top: -3px;
   }
 
   .contacts__address-wrapper > p {
-    margin-bottom: 40px;
+    margin-bottom: 27px;
+  }
+
+  .contacts__address a > br,
+  .contacts__address p > br {
+    display: inline;
+  }
+
+  .footer {
+    padding-bottom: 50px;
   }
 
   .footer__logo {
@@ -2126,7 +2153,12 @@ button,
   }
 
   .footer__social-list {
-    margin-right: -11px;
+    margin: 0;
+    margin-right: -13px;
+  }
+
+  .footer__menu {
+    margin: 0;
   }
 
   .footer-menu__item {
@@ -2150,7 +2182,7 @@ button,
 
   .social-list__link {
     height: 16px;
-    padding: 2px 11px;
+    padding: 2px 10px;
   }
 }
 
@@ -2160,7 +2192,7 @@ button,
   }
 
   .header {
-    padding: 20px 0;
+    padding: 15px 0;
   }
 
   .header__container {
@@ -2169,14 +2201,15 @@ button,
 
   .header__burger-btn {
     display: block;
+    margin-right: -4px;
   }
 
   .header__nav {
     position: absolute;
     z-index: 10;
-    top: -20px;
+    top: -15px;
     left: -15px;
-    width: 100vw;
+    right: -15px;
     height: 100vh;
     overflow: hidden;
     pointer-events: none;
@@ -2199,7 +2232,7 @@ button,
     position: absolute;
     z-index: 15;
     right: 0;
-    width: 285px;
+    width: 284px;
     height: 100vh;
     margin: 0;
     margin-left: auto;
@@ -2217,15 +2250,15 @@ button,
   .header .header__menu-icon {
     position: absolute;
     z-index: 20;
-    top: 20px;
-    left: 15px;
+    top: 21px;
+    left: 17px;
     display: block;
     color: #011c40;
   }
 
   .header__menu {
     height: 100vh;
-    margin-top: 50px;
+    margin-top: 75px;
     overflow: scroll;
   }
 
@@ -2243,7 +2276,7 @@ button,
 
   .menu__item:not(:last-child) {
     margin: 0;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
   }
 
   .menu__link {
@@ -2257,19 +2290,24 @@ button,
     min-height: 500px;
   }
 
+  .hero__container {
+    margin-top: -4px;
+  }
+
   .hero__container h1 {
-    margin-bottom: 25px;
+    margin-bottom: 11px;
     font-size: 36px;
     line-height: 125%;
   }
 
   .hero__container p {
+    width: 210px;
     font-size: 16px;
     line-height: 140%;
   }
 
   .promo {
-    padding: 65px 0 85px;
+    padding: 66px 0 85px;
   }
 
   .promo__container {
@@ -2288,13 +2326,23 @@ button,
   }
 
   .features h2 {
-    margin-bottom: 30px;
+    margin-top: -3px;
+    margin-bottom: 37px;
     font-size: 24px;
   }
 
   .features__item {
     min-height: 250px;
-    padding: 25px 15px 25px 20px;
+    padding: 25px 15px 20px 20px;
+  }
+
+  .features__item h3 {
+    width: 175px;
+    margin-bottom: 9px;
+  }
+
+  .features__icon {
+    margin-bottom: 19px;
   }
 
   .next-cruises {
@@ -2302,7 +2350,7 @@ button,
   }
 
   .next-cruises h2 {
-    margin-bottom: 40px;
+    margin-bottom: 31px;
     font-size: 24px;
   }
 
@@ -2316,6 +2364,7 @@ button,
 
   .product-card__title {
     padding: 25px;
+    padding-bottom: 18px;
   }
 
   .product-card__content {
@@ -2327,12 +2376,13 @@ button,
   }
 
   .booking__content-wrapper {
-    margin-bottom: 40px;
+    margin-top: -6px;
+    margin-bottom: 34px;
     padding: 0 10px;
   }
 
   .booking__content-wrapper h2 {
-    margin-bottom: 25px;
+    margin-bottom: 13px;
     font-size: 24px;
     line-height: 31px;
   }
@@ -2359,6 +2409,26 @@ button,
     display: inline;
   }
 
+  .form h3 {
+    margin-bottom: 29px;
+    line-height: 25px;
+  }
+
+  .form input[type=checkbox] + span {
+    width: 20px;
+    height: 20px;
+    margin-top: -3px;
+    margin-right: 8px;
+  }
+
+  .form span + span {
+    line-height: 113%;
+  }
+
+  .form button {
+    margin-top: 7px;
+  }
+
   .contacts {
     padding: 65px 0;
   }
@@ -2380,11 +2450,13 @@ button,
     -webkit-box-ordinal-group: 0;
     -ms-flex-order: -1;
     order: -1;
-    margin-bottom: 43px;
+    margin-top: -7px;
+    margin-bottom: 37px;
   }
 
   .footer {
     padding: 40px 0;
+    padding-bottom: 31px;
   }
 
   .footer__container {
@@ -2411,7 +2483,7 @@ button,
 
   .footer-menu__item:not(:last-child) {
     margin: 0;
-    margin-bottom: 13px;
+    margin-bottom: 16px;
   }
 
   .social-list {
@@ -2421,7 +2493,7 @@ button,
   }
 
   .social-list__link {
-    padding: 8px 11px;
+    padding: 8px 10px;
   }
 }
 

@@ -35,19 +35,22 @@
 
 .features h2 {
   margin: 0;
-  margin-bottom: 40px;
+  margin-top: -3px;
+  margin-bottom: 56px;
   font-weight: 600;
   font-size: 28px;
   line-height: 100%;
   text-align: center;
 
   @include vp-1023 {
-    margin-bottom: 52px;
+    margin-top: -4px;
+    margin-bottom: 56px;
     font-size: 26px;
   }
 
   @include vp-767 {
-    margin-bottom: 30px;
+    margin-top: -3px;
+    margin-bottom: 37px;
     font-size: 24px;
   }
 }
@@ -68,21 +71,21 @@
 
 .features__item {
   padding: 30px;
-  padding-bottom: 50px;
+  padding-bottom: 45px;
   background-color: $color-alice-blue-lite;
 
   @include vp-1023 {
-    padding: 26px 16px 25px 20px;
+    padding: 26px 16px 19px 20px;
   }
 
   @include vp-767 {
     min-height: 250px;
-    padding: 25px 15px 25px 20px;
+    padding: 25px 15px 20px 20px;
   }
 
   & h3 {
     margin: 0;
-    margin-bottom: 20px;
+    margin-bottom: 13px;
     font-weight: 500;
     font-size: 18px;
     line-height: 100%;
@@ -91,22 +94,31 @@
       line-height: 25px;
       margin-bottom: 11px;
     }
+
+    @include vp-767 {
+      width: 175px;
+      margin-bottom: 9px;
+    }
   }
 
   & p {
     margin: 0;
     font-size: 14px;
-    line-height: 126.8%;
+    line-height: 142.8%;
   }
 }
 
 .features__icon {
   height: 32px;
-  margin-bottom: 25px;
+  margin-bottom: 23px;
 
   @include vp-1023 {
     height: 26px;
-    margin-bottom: 24px;
+    margin-bottom: 18px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 19px;
   }
 
   & svg,

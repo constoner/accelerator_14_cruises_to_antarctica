@@ -20,11 +20,17 @@
 
   & h3 {
     margin: 0;
-    margin-bottom: 35px;
+    margin-top: -6px;
+    margin-bottom: 27px;
     font-weight: 500;
     font-size: 18px;
     line-height: 27px;
     color: $color-alice-blue-lite;
+
+    @include vp-767 {
+      margin-bottom: 29px;
+      line-height: 25px;
+    }
   }
 
   & form {
@@ -90,6 +96,13 @@
     margin-right: 5px;
     background-color: $color-alice-blue-lite;
 
+    @include vp-767 {
+      width: 20px;
+      height: 20px;
+      margin-top: -3px;
+      margin-right: 8px;
+    }
+
     &::before {
       position: absolute;
       top: 5px;
@@ -110,6 +123,10 @@
     font-weight: 400;
     font-size: 10px;
     line-height: 130%;
+
+    @include vp-767 {
+      line-height: 113%;
+    }
   }
 
   // состояния для кастомного чекбокса
@@ -144,6 +161,10 @@
   box-shadow: none;
   transition: box-shadow $trans-default;
 
+  @include vp-767 {
+    margin-top: 7px;
+  }
+
   @include hover {
     box-shadow: 0 0 0 2px $color-tangaroa-dark, 0 0 0 4px $color-alice-blue-lite;
   }
@@ -163,17 +184,17 @@
   }
 }
 
-  // стили для валидации
-  $color-error: $color-burnt-sienna;
+// стили для валидации
+$color-error: $color-burnt-sienna;
 
-  .form .is-invalid > input {
-    box-shadow: 0 0 0 2px $color-tangaroa-dark, 0 0 0 4px $color-error;
-  }
+.form .is-invalid > input {
+  box-shadow: 0 0 0 2px $color-tangaroa-dark, 0 0 0 4px $color-error;
+}
 
-  .form .is-valid > input {
-    box-shadow: 0 0 0 2px $color-tangaroa-dark, 0 0 0 4px $color-pastel-green;
-  }
+.form .is-valid > input {
+  box-shadow: 0 0 0 2px $color-tangaroa-dark, 0 0 0 4px $color-pastel-green;
+}
 
-  .form .is-invalid > input[type="checkbox"] + span {
-    background-color: $color-error;
-  }
+.form .is-invalid > input[type="checkbox"] + span {
+  background-color: $color-error;
+}

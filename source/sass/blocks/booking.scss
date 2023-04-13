@@ -42,35 +42,38 @@
 }
 
 .booking__content-wrapper {
+  margin-top: -7px;
   margin-right: 60px;
   flex-shrink: 1;
 
   @include vp-1023 {
+    margin-top: -13px;
     margin-right: 0;
-    margin-bottom: 60px;
+    margin-bottom: 53px;
     text-align: center;
   }
 
   @include vp-767 {
-    margin-bottom: 40px;
+    margin-top: -6px;
+    margin-bottom: 34px;
     padding: 0 10px;
   }
 }
 
 .booking__content-wrapper h2 {
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 8px;
   font-weight: 700;
   font-size: 40px;
   line-height: 150%;
 
   @include vp-1023 {
-    margin-bottom: 25px;
+    margin-bottom: 5px;
     font-size: 34px;
   }
 
   @include vp-767 {
-    margin-bottom: 25px;
+    margin-bottom: 13px;
     font-size: 24px;
     line-height: 31px;
   }

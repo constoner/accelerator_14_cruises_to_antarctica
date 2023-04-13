@@ -10,7 +10,7 @@
   }
 
   @include vp-767 {
-    padding: 20px 0;
+    padding: 15px 0;
   }
 }
 
@@ -45,6 +45,7 @@
 
   @include vp-767 {
     display: block;
+    margin-right: -4px;
   }
 }
 
@@ -52,9 +53,9 @@
   @include vp-767 {
     position: absolute;
     z-index: 10;
-    top: -20px;
+    top: -15px;
     left: -15px;
-    width: 100vw;
+    right: -15px;
     height: 100vh;
     overflow: hidden;
     pointer-events: none;
@@ -90,7 +91,7 @@
     position: absolute;
     z-index: 15;
     right: 0;
-    width: 285px;
+    width: 284px;
     height: 100vh;
     margin: 0;
     margin-left: auto;
@@ -111,8 +112,8 @@
   @include vp-767 {
     position: absolute;
     z-index: 20;
-    top: 20px;
-    left: 15px;
+    top: 21px;
+    left: 17px;
     display: block;
     color: $color-tangaroa-dark;
   }
@@ -123,7 +124,7 @@
 
   @include vp-767 {
     height: 100vh;
-    margin-top: 50px;
+    margin-top: 75px;
     overflow: scroll;
   }
 }

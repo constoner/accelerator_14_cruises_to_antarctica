@@ -8,6 +8,8 @@
   padding-bottom: 148.46%;
   background-color: $color-solitude-lite;
   overflow: hidden;
+  will-change: box-shadow;
+  box-shadow: 0 4px 35px rgba(1, 28, 64, 0);
 
   @include vp-1023 {
     padding-bottom: 124.92%;
@@ -20,6 +22,8 @@
   // стили для состояния карточки
   &:hover,
   &:focus-within {
+    box-shadow: 0 4px 35px rgba(1, 28, 64, 0.15);
+
     & .product-card__content {
       transform: translateX(0);
       transition: transform $trans-default;
@@ -78,13 +82,16 @@
   flex-direction: column;
   justify-content: flex-end;
   padding: 30px;
+  padding-bottom: 22px;
 
   @include vp-1023 {
     padding: 35px;
+    padding-bottom: 28px;
   }
 
   @include vp-767 {
     padding: 25px;
+    padding-bottom: 18px;
   }
 
   & h3 {
@@ -121,43 +128,17 @@
     padding: 35px 25px;
   }
 
-  // стили для контента
-  & h4 {
-    margin: 0;
-    margin-bottom: 25px;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 150%;
-    color: $color-alice-blue-lite;
-  }
-
-  & dt {
-    margin-top: 20px;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 140%;
-  }
-
-  & dd {
-    margin: 0;
-    margin-top: 10px;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 140%;
-    color: $color-quartz;
-  }
-
   // кнопка в карточке и ее стили
   a {
     display: block;
     width: 100%;
     margin: 0;
     margin-top: 10px;
-    padding: 8px 10px 11px;
+    padding: 11px 10px 11px;
     font-family: $ff-placeholder;
     font-weight: 600;
     font-size: 14px;
-    line-height: 21px;
+    line-height: 18px;
     text-align: center;
     color: $color-tangaroa-dark;
     background-color: $color-alice-blue-lite;
@@ -185,40 +166,34 @@
       pointer-events: none;
     }
   }
-
-  // стили для скроллбара
-  scrollbar-color: rgba(155, 155, 155, 0.8);
-  scrollbar-width: thin;
-
-  &::-webkit-scrollbar {
-    width: 4px;
-  }
-  &::-webkit-scrollbar-track {
-    background: transparent;
-  }
-  &::-webkit-scrollbar-thumb {
-    background-color: rgba(155, 155, 155, 0.8);
-    border-radius: 20px;
-    border: transparent;
-
-    &:hover {
-      background-color: rgba(155, 155, 155, 0.6);
-    }
-
-    &:active {
-      background-color: rgba(155, 155, 155, 0.4);
-    }
-  }
 }
 
 .product-card__inner-content {
   flex-grow: 1;
   overflow: auto;
+  margin-right: -5px;
+
+  @include focus {
+    outline: 3px solid $color-koromiko-accent;
+  }
 
   // стили для контента
+  & h4 {
+    margin: 0;
+    margin-top: -7px;
+    margin-bottom: 14px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 150%;
+    color: $color-alice-blue-lite;
+  }
+
+  & dl {
+    margin: 0;
+  }
 
   & dt {
-    margin-top: 20px;
+    margin-bottom: 3px;
     font-weight: 500;
     font-size: 14px;
     line-height: 140%;
@@ -226,11 +201,15 @@
 
   & dd {
     margin: 0;
-    margin-top: 10px;
+    margin-bottom: 10px;
     font-weight: 400;
     font-size: 14px;
     line-height: 140%;
     color: $color-quartz;
+  }
+
+  & dd:last-child {
+    margin-bottom: 0;
   }
 
   // стили для скроллбара
@@ -240,9 +219,11 @@
   &::-webkit-scrollbar {
     width: 4px;
   }
+
   &::-webkit-scrollbar-track {
     background: transparent;
   }
+
   &::-webkit-scrollbar-thumb {
     background-color: rgba(155, 155, 155, 0.8);
     border-radius: 20px;

@@ -26,11 +26,11 @@
 
   @include vp-1023 {
     height: 16px;
-    padding: 2px 11px;
+    padding: 2px 10px;
   }
 
   @include vp-767 {
-    padding: 8px 11px;
+    padding: 8px 10px;
   }
 
   @include hover {
