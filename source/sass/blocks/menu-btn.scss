@@ -13,7 +13,7 @@
   }
 }
 
-.menu-btn__E {
+.menu-btn__open {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -45,7 +45,7 @@
   }
 }
 
-.menu-btn__X {
+.menu-btn__close {
   position: absolute;
   top: calc(50% - 1px);
   left: 8px;
@@ -73,12 +73,12 @@
 }
 
 .is-open .menu-btn {
-  & .menu-btn__E {
+  & .menu-btn__open {
     transform: translate(-50%, -50%) scaleY(0);
     transition: transform 0.1s ease-out;
   }
 
-  & .menu-btn__X {
+  & .menu-btn__close {
     transform: scaleY(1);
     transition: transform 0.1s ease-out;
     transition-delay: 0.1s;

@@ -828,7 +828,7 @@ button,
   opacity: 0.2;
 }
 
-.menu-btn__E {
+.menu-btn__open {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -852,8 +852,8 @@ button,
   transition-delay: 0.1s;
 }
 
-.menu-btn__E::before,
-.menu-btn__E::after {
+.menu-btn__open::before,
+.menu-btn__open::after {
   display: block;
   position: absolute;
   width: 24px;
@@ -862,15 +862,15 @@ button,
   content: "";
 }
 
-.menu-btn__E::before {
+.menu-btn__open::before {
   top: -6px;
 }
 
-.menu-btn__E::after {
+.menu-btn__open::after {
   bottom: -6px;
 }
 
-.menu-btn__X {
+.menu-btn__close {
   position: absolute;
   top: calc(50% - 1px);
   left: 8px;
@@ -885,8 +885,8 @@ button,
   transition: transform 0.1s ease-out, -webkit-transform 0.1s ease-out;
 }
 
-.menu-btn__X::before,
-.menu-btn__X::after {
+.menu-btn__close::before,
+.menu-btn__close::after {
   position: absolute;
   display: block;
   width: 16.5px;
@@ -895,19 +895,19 @@ button,
   content: "";
 }
 
-.menu-btn__X::before {
+.menu-btn__close::before {
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
-.menu-btn__X::after {
+.menu-btn__close::after {
   -webkit-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
 
-.is-open .menu-btn .menu-btn__E {
+.is-open .menu-btn .menu-btn__open {
   -webkit-transform: translate(-50%, -50%) scaleY(0);
   -ms-transform: translate(-50%, -50%) scaleY(0);
   transform: translate(-50%, -50%) scaleY(0);
@@ -918,7 +918,7 @@ button,
   transition: transform 0.1s ease-out, -webkit-transform 0.1s ease-out;
 }
 
-.is-open .menu-btn .menu-btn__X {
+.is-open .menu-btn .menu-btn__close {
   -webkit-transform: scaleY(1);
   -ms-transform: scaleY(1);
   transform: scaleY(1);
