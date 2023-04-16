@@ -1714,32 +1714,33 @@ button,
 
 .contacts__item {
   position: relative;
+  display: block;
+  margin: 0;
   margin-top: 20px;
+  padding-left: 28px;
 }
 
 .contacts__item img {
   position: absolute;
   top: 2px;
+  left: 0;
 }
 
-.contacts__address a,
-.contacts__address p {
+.contacts__item.focus-visible:focus {
+  outline: 3px solid #ffb451;
+}
+
+.contacts__item br {
+  display: none;
+}
+
+.contacts__item span {
+  display: block;
   margin: 0;
-  margin-left: 28px;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
-}
-
-.contacts__address a.focus-visible:focus,
-.contacts__address p.focus-visible:focus {
-  outline: 3px solid #ffb451;
-}
-
-.contacts__address a > br,
-.contacts__address p > br {
-  display: none;
 }
 
 .map {
@@ -2139,8 +2140,7 @@ button,
     margin-bottom: 27px;
   }
 
-  .contacts__address a > br,
-  .contacts__address p > br {
+  .contacts__item br {
     display: inline;
   }
 
