@@ -828,7 +828,7 @@ button,
   opacity: 0.2;
 }
 
-.menu-btn__E {
+.menu-btn__open {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -852,8 +852,8 @@ button,
   transition-delay: 0.1s;
 }
 
-.menu-btn__E::before,
-.menu-btn__E::after {
+.menu-btn__open::before,
+.menu-btn__open::after {
   display: block;
   position: absolute;
   width: 24px;
@@ -862,15 +862,15 @@ button,
   content: "";
 }
 
-.menu-btn__E::before {
+.menu-btn__open::before {
   top: -6px;
 }
 
-.menu-btn__E::after {
+.menu-btn__open::after {
   bottom: -6px;
 }
 
-.menu-btn__X {
+.menu-btn__close {
   position: absolute;
   top: calc(50% - 1px);
   left: 8px;
@@ -885,8 +885,8 @@ button,
   transition: transform 0.1s ease-out, -webkit-transform 0.1s ease-out;
 }
 
-.menu-btn__X::before,
-.menu-btn__X::after {
+.menu-btn__close::before,
+.menu-btn__close::after {
   position: absolute;
   display: block;
   width: 16.5px;
@@ -895,19 +895,19 @@ button,
   content: "";
 }
 
-.menu-btn__X::before {
+.menu-btn__close::before {
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
-.menu-btn__X::after {
+.menu-btn__close::after {
   -webkit-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
 
-.is-open .menu-btn .menu-btn__E {
+.is-open .menu-btn .menu-btn__open {
   -webkit-transform: translate(-50%, -50%) scaleY(0);
   -ms-transform: translate(-50%, -50%) scaleY(0);
   transform: translate(-50%, -50%) scaleY(0);
@@ -918,7 +918,7 @@ button,
   transition: transform 0.1s ease-out, -webkit-transform 0.1s ease-out;
 }
 
-.is-open .menu-btn .menu-btn__X {
+.is-open .menu-btn .menu-btn__close {
   -webkit-transform: scaleY(1);
   -ms-transform: scaleY(1);
   transform: scaleY(1);
@@ -1714,32 +1714,33 @@ button,
 
 .contacts__item {
   position: relative;
+  display: block;
+  margin: 0;
   margin-top: 20px;
+  padding-left: 28px;
 }
 
 .contacts__item img {
   position: absolute;
   top: 2px;
+  left: 0;
 }
 
-.contacts__address a,
-.contacts__address p {
+.contacts__item.focus-visible:focus {
+  outline: 3px solid #ffb451;
+}
+
+.contacts__item br {
+  display: none;
+}
+
+.contacts__item span {
+  display: block;
   margin: 0;
-  margin-left: 28px;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
-}
-
-.contacts__address a.focus-visible:focus,
-.contacts__address p.focus-visible:focus {
-  outline: 3px solid #ffb451;
-}
-
-.contacts__address a > br,
-.contacts__address p > br {
-  display: none;
 }
 
 .map {
@@ -2139,8 +2140,7 @@ button,
     margin-bottom: 27px;
   }
 
-  .contacts__address a > br,
-  .contacts__address p > br {
+  .contacts__item br {
     display: inline;
   }
 
