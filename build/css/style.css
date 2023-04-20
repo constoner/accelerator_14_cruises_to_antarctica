@@ -2294,7 +2294,6 @@ button,
   .header__menu {
     height: 100vh;
     margin-top: 75px;
-    overflow: scroll;
   }
 
   .menu {
@@ -2307,6 +2306,7 @@ button,
     padding-left: 15px;
     padding-right: 30px;
     background-color: #f9fbfd;
+    overflow: auto;
   }
 
   .menu__item:not(:last-child) {
