@@ -1716,6 +1716,38 @@ button,
   line-height: 150%;
 }
 
+.contacts__address-wrapper a {
+  color: #011c40;
+  opacity: 1;
+  -webkit-transition: opacity 0.2s ease-out;
+  -o-transition: opacity 0.2s ease-out;
+  transition: opacity 0.2s ease-out;
+}
+
+.contacts__address-wrapper a::after {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(1, 28, 64, 0.8);
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  opacity: 0;
+  -webkit-transition: opacity 0.2s ease-out, -webkit-transform 0.2s ease-out;
+  transition: opacity 0.2s ease-out, -webkit-transform 0.2s ease-out;
+  -o-transition: transform 0.2s ease-out, opacity 0.2s ease-out;
+  transition: transform 0.2s ease-out, opacity 0.2s ease-out;
+  transition: transform 0.2s ease-out, opacity 0.2s ease-out, -webkit-transform 0.2s ease-out;
+  content: "";
+}
+
+.contacts__address-wrapper a.focus-visible:focus {
+  outline: 3px solid #ffb451;
+}
+
 .contacts__item {
   position: relative;
   display: block;
@@ -1731,10 +1763,6 @@ button,
   position: absolute;
   top: 2px;
   left: 0;
-}
-
-.contacts__item.focus-visible:focus {
-  outline: 3px solid #ffb451;
 }
 
 .contacts__item br {
@@ -2537,6 +2565,13 @@ button,
   .form button:hover:not(.focus-visible) {
     -webkit-box-shadow: 0 0 0 2px #011c40, 0 0 0 4px #f9fbfd;
     box-shadow: 0 0 0 2px #011c40, 0 0 0 4px #f9fbfd;
+  }
+
+  .contacts__address-wrapper a:hover:not(.focus-visible)::after {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
   }
 
   .footer-menu__link:hover:not(.focus-visible)::after {
