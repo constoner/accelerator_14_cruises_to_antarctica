@@ -1186,7 +1186,7 @@ button,
 .next-cruises__list {
   display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   gap: 30px;
   margin: 0;
   padding: 0 15px;
