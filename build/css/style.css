@@ -1123,7 +1123,8 @@ button,
 .features__list {
   display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(246px, 1fr));
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
   gap: 40px;
   margin: 0;
   padding: 0;
@@ -1131,6 +1132,7 @@ button,
 }
 
 .features__item {
+  min-height: 241px;
   padding: 30px;
   padding-bottom: 45px;
   background-color: #f9fbfd;
@@ -2094,11 +2096,11 @@ button,
   }
 
   .features__list {
-    grid-template-columns: repeat(auto-fit, minmax(206px, 1fr));
     gap: 30px;
   }
 
   .features__item {
+    min-height: 310px;
     padding: 26px 16px 19px 20px;
   }
 
@@ -2364,6 +2366,10 @@ button,
     margin-top: -3px;
     margin-bottom: 37px;
     font-size: 24px;
+  }
+
+  .features__list {
+    grid-template-columns: repeat(auto-fit, minmax(206px, 1fr));
   }
 
   .features__item {

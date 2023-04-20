@@ -57,24 +57,29 @@
 
 .features__list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(246px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 40px;
   margin: 0;
   padding: 0;
   list-style-type: none;
 
   @include vp-1023 {
-    grid-template-columns: repeat(auto-fit, minmax(206px, 1fr));
     gap: 30px;
+  }
+
+  @include vp-767 {
+    grid-template-columns: repeat(auto-fit, minmax(206px, 1fr));
   }
 }
 
 .features__item {
+  min-height: 241px;
   padding: 30px;
   padding-bottom: 45px;
   background-color: $color-alice-blue-lite;
 
   @include vp-1023 {
+    min-height: 310px;
     padding: 26px 16px 19px 20px;
   }
 
