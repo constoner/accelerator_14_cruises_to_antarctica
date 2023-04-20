@@ -1768,10 +1768,6 @@ button,
   left: 0;
 }
 
-.contacts__item br {
-  display: none;
-}
-
 .contacts__item span {
   display: block;
   margin: 0;
@@ -2180,10 +2176,6 @@ button,
 
   .contacts__address-wrapper > p {
     margin-bottom: 27px;
-  }
-
-  .contacts__item br {
-    display: inline;
   }
 
   .footer {

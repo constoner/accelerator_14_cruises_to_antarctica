@@ -111,14 +111,6 @@
     left: 0;
   }
 
-  & br {
-    display: none;
-
-    @include vp-1023 {
-      display: inline;
-    }
-  }
-
   & span {
     display: block;
     margin: 0;
