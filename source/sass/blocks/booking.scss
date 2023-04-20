@@ -33,7 +33,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 60px;
+  padding: 0 5.17%;
 
   @include vp-1023 {
     flex-direction: column;
@@ -43,7 +43,7 @@
 
 .booking__content-wrapper {
   margin-top: -7px;
-  margin-right: 60px;
+  margin-right: 10px;
   flex-shrink: 1;
 
   @include vp-1023 {
