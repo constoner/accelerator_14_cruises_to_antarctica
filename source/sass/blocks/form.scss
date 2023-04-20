@@ -8,16 +8,6 @@
     text-align: center;
   }
 
-  & br {
-    display: none;
-  }
-
-  @include vp-767 {
-    & br {
-      display: inline;
-    }
-  }
-
   & h3 {
     margin: 0;
     margin-top: -6px;
@@ -82,6 +72,10 @@
     opacity: 1;
     transition: opacity $trans-default;
 
+    @include vp-767 {
+      margin-right: 50px;
+    }
+
     @include hover {
       opacity: 0.6;
     }
@@ -90,6 +84,7 @@
   // стили для кастомного чекбокса
   & input[type="checkbox"] + span {
     position: relative;
+    flex-shrink: 0;
     display: block;
     width: 18px;
     height: 18px;
