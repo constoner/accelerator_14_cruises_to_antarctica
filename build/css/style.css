@@ -1148,6 +1148,7 @@ button,
 
 .features__item p {
   margin: 0;
+  margin-top: 13px;
   font-size: 14px;
   line-height: 142.8%;
 }
@@ -2109,6 +2110,10 @@ button,
     margin-bottom: 11px;
   }
 
+  .features__item p {
+    margin-top: 11px;
+  }
+
   .features__icon {
     height: 26px;
     margin-bottom: 18px;
@@ -2380,6 +2385,10 @@ button,
   .features__item h3 {
     width: 175px;
     margin-bottom: 9px;
+  }
+
+  .features__item p {
+    margin-top: 9px;
   }
 
   .features__icon {
