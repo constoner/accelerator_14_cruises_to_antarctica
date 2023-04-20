@@ -158,6 +158,7 @@
   background-color: $color-alice-blue-lite;
   border: none;
   cursor: pointer;
+  user-select: none;
   box-shadow: none;
   transition: box-shadow $trans-default;
 
