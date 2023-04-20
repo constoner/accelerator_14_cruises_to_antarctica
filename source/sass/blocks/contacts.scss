@@ -67,9 +67,6 @@
     $link-color: $color-tangaroa-dark;
     color: $link-color;
 
-    opacity: 1;
-    transition: opacity $trans-default;
-
     &::after {
       position: absolute;
       bottom: -4px;
@@ -93,6 +90,10 @@
 
     @include focus {
       outline: 3px solid $color-koromiko-accent;
+    }
+
+    &:active {
+      opacity: 0.6;
     }
   }
 }

@@ -1006,6 +1006,8 @@ button,
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
+  -o-object-position: 50% 70%;
+  object-position: 50% 70%;
 }
 
 .hero__container {
@@ -1719,10 +1721,6 @@ button,
 
 .contacts__address-wrapper a {
   color: #011c40;
-  opacity: 1;
-  -webkit-transition: opacity 0.2s ease-out;
-  -o-transition: opacity 0.2s ease-out;
-  transition: opacity 0.2s ease-out;
 }
 
 .contacts__address-wrapper a::after {
@@ -1747,6 +1745,10 @@ button,
 
 .contacts__address-wrapper a.focus-visible:focus {
   outline: 3px solid #ffb451;
+}
+
+.contacts__address-wrapper a:active {
+  opacity: 0.6;
 }
 
 .contacts__item {
