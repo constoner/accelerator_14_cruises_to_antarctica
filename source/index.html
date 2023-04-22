@@ -39,71 +39,69 @@
 <body>
   <div class="wrapper">
 
-    <!-- header -->
-    <header class="header" data-header>
-      <div class="container">
-        <div class="header__container">
-          <a class="header__logo logo" href="./index.html" aria-label="Переход на главную страницу." tabindex="0">
-            <svg class="logo__image" width="70" height="38">
-              <use href="./img/svg/logo.svg#logo-icon"></use>
-            </svg>
-          </a>
-
-          <button class="header__burger-btn menu-btn" type="button" aria-label="Кнопка меню." aria-pressed="false"
-            data-burger>
-            <span class="menu-btn__open"></span>
-            <span class="menu-btn__close"></span>
-          </button>
-
-          <nav class="header__nav">
-            <div class="header__menu-underlay" data-close-menu></div>
-            <div class="header__menu-wrapper">
-              <a class="header__menu-icon logo" href="./index.html" aria-label="Переход на главную страницу.">
-                <svg class="logo__image" width="70" height="38">
-                  <use href="./img/svg/logo.svg#logo-icon"></use>
-                </svg>
-              </a>
-              <ul class="header__menu menu">
-                <li class="menu__item">
-                  <a class="menu__link" href="#features">Преимущества</a>
-                </li>
-                <li class="menu__item">
-                  <a class="menu__link" href="./departures.html">Направления</a>
-                </li>
-                <li class=" menu__item">
-                  <a class="menu__link" href="#next-cruises">Ближайшие круизы</a>
-                </li>
-                <li class="menu__item">
-                  <a class="menu__link" href="#contacts">Контакты</a>
-                </li>
-              </ul>
-            </div>
-          </nav>
-        </div>
+    <div class="multisection-background-wrapper">
+      <div class="multisection-background-wrapper__background">
+        <picture>
+          <source media="(max-width: 767px)" type="image/webp"
+            srcset="./img/backgrounds/hero-small.webp, ./img/backgrounds/hero-small@2x.webp 2x">
+          <source media="(max-width: 767px)"
+            srcset="./img/backgrounds/hero-small.jpg, ./img/backgrounds/hero-small@2x.jpg 2x">
+          <source media="(max-width: 1023px)" type="image/webp"
+            srcset="./img/backgrounds/hero-medium.webp, ./img/backgrounds/hero-medium@2x.webp 2x">
+          <source media="(max-width: 1023px)"
+            srcset="./img/backgrounds/hero-medium.jpg, ./img/backgrounds/hero-medium@2x.jpg 2x">
+          <source type="image/webp"
+            srcset="./img/backgrounds/hero-large.webp, ./img/backgrounds/hero-large@2x.webp 2x">
+          <img src="./img/backgrounds/hero-large.jpg" srcset="./img/backgrounds/hero-large@2x.jpg 2x" width="1366"
+            height="650" alt="" loading="eager" aria-hidden="true">
+        </picture>
       </div>
-    </header>
+      <!-- header -->
+      <header class="header" data-header>
+        <div class="container">
+          <div class="header__container">
+            <a class="header__logo logo" href="./index.html" aria-label="Переход на главную страницу." tabindex="0">
+              <svg class="logo__image" width="70" height="38">
+                <use href="./img/svg/logo.svg#logo-icon"></use>
+              </svg>
+            </a>
 
-    <!-- main -->
-    <main>
+            <button class="header__burger-btn menu-btn" type="button" aria-label="Кнопка меню." aria-pressed="false"
+              data-burger>
+              <span class="menu-btn__open"></span>
+              <span class="menu-btn__close"></span>
+            </button>
+
+            <nav class="header__nav">
+              <div class="header__menu-underlay" data-close-menu></div>
+              <div class="header__menu-wrapper">
+                <a class="header__menu-icon logo" href="./index.html" aria-label="Переход на главную страницу.">
+                  <svg class="logo__image" width="70" height="38">
+                    <use href="./img/svg/logo.svg#logo-icon"></use>
+                  </svg>
+                </a>
+                <ul class="header__menu menu">
+                  <li class="menu__item">
+                    <a class="menu__link" href="#features">Преимущества</a>
+                  </li>
+                  <li class="menu__item">
+                    <a class="menu__link" href="./departures.html">Направления</a>
+                  </li>
+                  <li class=" menu__item">
+                    <a class="menu__link" href="#next-cruises">Ближайшие круизы</a>
+                  </li>
+                  <li class="menu__item">
+                    <a class="menu__link" href="#contacts">Контакты</a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </header>
 
       <!-- hero -->
       <section class="hero">
-        <div class="hero__background">
-          <picture>
-            <source media="(max-width: 767px)" type="image/webp"
-              srcset="./img/backgrounds/hero-small.webp, ./img/backgrounds/hero-small@2x.webp 2x">
-            <source media="(max-width: 767px)"
-              srcset="./img/backgrounds/hero-small.jpg, ./img/backgrounds/hero-small@2x.jpg 2x">
-            <source media="(max-width: 1023px)" type="image/webp"
-              srcset="./img/backgrounds/hero-medium.webp, ./img/backgrounds/hero-medium@2x.webp 2x">
-            <source media="(max-width: 1023px)"
-              srcset="./img/backgrounds/hero-medium.jpg, ./img/backgrounds/hero-medium@2x.jpg 2x">
-            <source type="image/webp"
-              srcset="./img/backgrounds/hero-large.webp, ./img/backgrounds/hero-large@2x.webp 2x">
-            <img src="./img/backgrounds/hero-large.jpg" srcset="./img/backgrounds/hero-large@2x.jpg 2x" width="1366"
-              height="650" alt="" loading="eager" aria-hidden="true">
-          </picture>
-        </div>
         <div class="container">
           <div class="hero__container">
             <h1>Круизы в&nbsp;Антарктику</h1>
@@ -111,7 +109,11 @@
           </div>
         </div>
       </section>
+    </div>
 
+
+    <!-- main -->
+    <main>
       <!-- promo -->
       <section class="promo">
         <div class="container">
