@@ -2302,6 +2302,7 @@ button,
     flex-direction: column;
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
+    padding-bottom: 75px;
     padding-left: 15px;
     padding-right: 30px;
     background-color: #f9fbfd;
